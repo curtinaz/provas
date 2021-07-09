@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once '../config.php';
+require_once 'database.php';
 
 if (!$_POST['mail'] || !$_POST['senha'] || !$_POST['name']) {
     echo "Preencha todos os campos";
@@ -12,38 +12,24 @@ if (!$_POST['mail'] || !$_POST['senha'] || !$_POST['name']) {
     $name = $_POST['name'];
     $mail = $_POST['mail'];
     $senha = md5($_POST['senha']);
+    //coloca todos os dados informados em uma variável
 
-    
+    $hasAccount = $conexao->query("SELECT * FROM usuarios WHERE email = '$mail'");
+    if ($hasAccount->num_rows > 0) {
+        echo "Já existe uma conta com este e-mail, <a href='../index.php'>faça login</a>";
+    } else {
+        $conexao->query("INSERT INTO `usuarios` (`id`, `name`, `email`, `senha`) VALUES (NULL, '$name', '$mail', '$senha')");
+
+        $_SESSION["logado"]="YES";
+        $_SESSION["name"]=$name;
+        // define que o usuário está logado e, como o nome que ele informou no post é confiável, uso ele mesmo para definir o valor da session name.
+
+        header('Location: ../dashboard.php');
+        // redireciona o usuário para a página de 'logado'.
+    }
 }
 
-mysqli_close($conexao);
-
-//     $checkSQL = $connect->query("SELECT * FROM usuarios WHERE email = '$user_email'");
-//     $checkReturn = $checkSQL->fetch_all(MYSQLI_ASSOC);
-
-//     if (sizeof($checkReturn) > 0) {
-//         // quando o $email não retornava dados, dava uma notice chata de que ele não era um array, dai fiz o if dessa forma pra evitar aquilo.
-//         $email = $checkReturn[0]['email'];
-//         if ($email == $user_email) {
-//             echo "Já existe uma conta com o e-mail: ".$user_email;
-//         } 
-//     } else {
-//         $registerSQL = $connect->query("INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`) VALUES (NULL, '$user_name', '$user_email', '$user_password')");
-//         echo "conta criada";
-
-//         $loginSQL = $connect->query("SELECT * FROM usuarios WHERE email = '$user_email' AND senha = '$user_password'");
-//         $loginReturn = $checkSQL->fetch_all(MYSQLI_ASSOC);   
-        
-//         $db_name = $loginReturn[0]['nome'];
-
-//         $_SESSION["login"]="YES"; // define a variavel de sessão login como YES
-//         $_SESSION["name"]=$db_name; // define a variavel de sessão name o valor da coluna name resultante da query SQL.
-
-//         header('Location: ./memberArea.php');
-//     }
-
-//     mysqli_close($connect);
-
-// }
+$conexao->close();
+// fecha o banco.
 
 ?>

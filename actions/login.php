@@ -1,10 +1,7 @@
 <?php
 
-require_once '../config.php';
+require_once 'database.php';
 session_start();
-
-echo $_POST['mail']." ";
-echo md5($_POST['senha']);
 
 if (!$_POST['mail'] || !$_POST['senha']) {
     echo "Preencha todos os campos";
@@ -14,9 +11,26 @@ if (!$_POST['mail'] || !$_POST['senha']) {
 } else {
     $mail = $_POST['mail'];
     $senha = md5($_POST['senha']);
+
+    $loginQuery = $conexao->query("SELECT * FROM usuarios WHERE email = '$mail' AND senha = '$senha'");
+
+    if ($loginQuery->num_rows == 1) {
+        $userQuery = $conexao->query("SELECT `name` FROM usuarios WHERE email = '$mail' AND senha = '$senha'");
+        $userInfos = $userQuery->fetch_all(MYSQLI_ASSOC);
+        // pega o nome do usuário do banco de dados.
+
+        $_SESSION["logado"]="YES";
+        $_SESSION["name"]=$userInfos[0]['name'];
+        // define que o usuário está logado e, define a variável de sessão name com o valor retirado do banco de dados.
+
+        header('Location: ../dashboard.php');
+        
+    } else {
+        echo "Dados invalidos. <a href='../index.php'>Refaça o login</a>";
+    }
 }
 
-//     $checkSQL = $conexao->query("SELECT * FROM usuarios WHERE email = '$user_email' AND senha = '$user_password'");
+//     $checkSQL = ;
 //     $checkReturn = $checkSQL->fetch_all(MYSQLI_ASSOC);
 
 //     if (sizeof($checkReturn) == 1) {

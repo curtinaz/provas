@@ -1,6 +1,6 @@
 <?php
 
-require_once 'database.php';
+require_once '../config.php';
 session_start();
 
 echo $_POST['mail']." ";

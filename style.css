@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgb(41, 85, 207), rgb(16, 147, 207));
+    background-size: cover;
+}
+
+form {
+    width: 22rem;
+    height: 28rem;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.cadastro {
+    width: 22rem;
+    height: 28rem;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin: auto;
+}
+
+h1 {
+    margin: 1.2rem 0 3rem;
+    color: rgb(0, 0, 0);
+    user-select: none;
+}
+
+#register_btn2 {
+    margin: -1.3rem 0 2rem 0;
+}
+
+input.campo,
+.campo {
+    width: 16rem;
+    height: 2rem;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    outline: none;
+    margin: .6rem 0;
+    color: rgb(0, 0, 0);
+    border-radius: 16px;
+    border-bottom: 1px solid aliceblue;
+}
+
+input[type=submit] {
+    background: rgb(255, 0, 0);
+    margin: 2.4rem 0;
+    color: rgb(255, 240, 240);
+    border-radius: 16px;
+    width: 15rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+input.campo:hover,
+.campo:hover,
+#btns input[type=submit]:hover {
+    width: 16.6rem;
+}
+
+input {
+    transition: .4s;
+    font-size: .96rem;
+}
+
+input .campo,
+.campo:focus {
+    width: 16.6rem;
+}
+
+input::placeholder {
+    color: rgba(134, 134, 134, 0.685);
+}
+
+input::placeholder:focus {
+    color: none;
+}
+
+a {
+    margin: .9rem;
+    font-size: .9rem;
+    text-decoration: none;
+    color: grey;
+    transition: .4s;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+.off {
+    display: none;
+}

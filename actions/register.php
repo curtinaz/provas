@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once 'database.php';
+require_once '../config.php';
 
 if (!$_POST['mail'] || !$_POST['senha'] || !$_POST['name']) {
     echo "Preencha todos os campos";

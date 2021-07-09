@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once 'database.php';
+require_once '../config.php';
 
 if (!$_POST['productName'] || !$_POST['productDesc'] || !$_POST['productQtd'] || !$_POST['productValue']) {
     echo "Preencha todos os campos";

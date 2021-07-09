@@ -12,10 +12,10 @@ if (!$_POST['mail'] || !$_POST['senha']) {
     $mail = $_POST['mail'];
     $senha = md5($_POST['senha']);
 
-    $loginQuery = $conexao->query("SELECT * FROM usuarios WHERE email = '$mail' AND senha = '$senha'");
+    $loginQuery = $conexao->query("SELECT * FROM users WHERE email = '$mail' AND senha = '$senha'");
 
     if ($loginQuery->num_rows == 1) {
-        $userQuery = $conexao->query("SELECT `name` FROM usuarios WHERE email = '$mail' AND senha = '$senha'");
+        $userQuery = $conexao->query("SELECT `name` FROM users WHERE email = '$mail' AND senha = '$senha'");
         $userInfos = $userQuery->fetch_all(MYSQLI_ASSOC);
         // pega o nome do usuário do banco de dados.
 
@@ -23,10 +23,10 @@ if (!$_POST['mail'] || !$_POST['senha']) {
         $_SESSION["name"]=$userInfos[0]['name'];
         // define que o usuário está logado e, define a variável de sessão name com o valor retirado do banco de dados.
 
-        header('Location: ../dashboard.php');
+        header('Location: ../logado/');
         
     } else {
-        echo "Dados invalidos. <a href='../index.php'>Refaça o login</a>";
+        echo "Dados invalidos. <a href='../'>Refaça o login</a>";
     }
 }
 

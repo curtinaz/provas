@@ -14,17 +14,17 @@ if (!$_POST['mail'] || !$_POST['senha'] || !$_POST['name']) {
     $senha = md5($_POST['senha']);
     //coloca todos os dados informados em uma variável
 
-    $hasAccount = $conexao->query("SELECT * FROM usuarios WHERE email = '$mail'");
+    $hasAccount = $conexao->query("SELECT * FROM users WHERE email = '$mail'");
     if ($hasAccount->num_rows > 0) {
-        echo "Já existe uma conta com este e-mail, <a href='../index.php'>faça login</a>";
+        echo "Já existe uma conta com este e-mail, <a href='../'>faça login</a>";
     } else {
-        $conexao->query("INSERT INTO `usuarios` (`id`, `name`, `email`, `senha`) VALUES (NULL, '$name', '$mail', '$senha')");
+        $conexao->query("INSERT INTO `users` (`id`, `name`, `email`, `senha`) VALUES (NULL, '$name', '$mail', '$senha')");
 
         $_SESSION["logado"]="YES";
         $_SESSION["name"]=$name;
         // define que o usuário está logado e, como o nome que ele informou no post é confiável, uso ele mesmo para definir o valor da session name.
 
-        header('Location: ../dashboard.php');
+        header('Location: ../logado/');
         // redireciona o usuário para a página de 'logado'.
     }
 }

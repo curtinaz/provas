@@ -1,3 +1,17 @@
+<?php
+
+require_once '../config.php';
+session_start();
+
+if (!isset($_SESSION['logado'])) {
+    echo "Você precisa estar logado para acessar esta página.<br>";
+    echo "<a href='./index.php'>Faça Login</a>";
+    // testa se o usuário está logado
+} else {
+    $name = $_SESSION['name'];
+    // fecha o php para o html entrar 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +34,7 @@
             <i class="far fa-user-circle"></i>
         </div>
         <div class="name">
-           <span id="profile-name">Eduardo Lima</span> 
+           <span id="profile-name"><?php echo $name ?></span> 
         </div>
         <div class="items">
             <ul>
@@ -49,3 +63,6 @@
 </body>
 
 </html>
+
+<?php } //reinicia o php para poder fechar
+?>

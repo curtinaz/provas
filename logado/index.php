@@ -17,6 +17,9 @@ if (!isset($_SESSION['logado'])) {
     $pendentSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '0'");
     $pendentTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
 
+    $madeSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '1'");
+    $madeTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
+
     // fecha o php para o html entrar 
 ?>
 

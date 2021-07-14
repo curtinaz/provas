@@ -22,6 +22,7 @@ if (!$_POST['mail'] || !$_POST['senha'] || !$_POST['name']) {
 
         $_SESSION["logado"]="YES";
         $_SESSION["name"]=$name;
+        $_SESSION["email"]=$mail;
         // define que o usuário está logado e, como o nome que ele informou no post é confiável, uso ele mesmo para definir o valor da session name.
 
         header('Location: ../logado/');

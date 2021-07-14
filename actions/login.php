@@ -16,12 +16,12 @@ if (!$_POST['mail'] || !$_POST['senha']) {
     $loginQuery = $conexao->query("SELECT * FROM users WHERE email = '$mail' AND senha = '$senha'");
 
     if ($loginQuery->num_rows == 1) {
-        $userQuery = $conexao->query("SELECT `name`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
+        $userQuery = $conexao->query("SELECT `nome`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
         $userInfos = $userQuery->fetch_all(MYSQLI_ASSOC);
         // pega o nome do usuário do banco de dados.
 
         $_SESSION["logado"]="YES";
-        $_SESSION["name"]=$userInfos[0]['name'];
+        $_SESSION["name"]=$userInfos[0]['nome'];
         $_SESSION["email"]=$userInfos[0]['email'];
         // define que o usuário está logado e, define a variável de sessão name com o valor retirado do banco de dados.
 

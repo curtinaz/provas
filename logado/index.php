@@ -38,19 +38,19 @@ if (!isset($_SESSION['logado'])) {
         <div class="items">
             <ul>
                 <a href="#">
-                    <li class="link-items"><i class="far fa-user-circle"></i> Perfil</li>
+                    <li class="link-items"><i class="far fa-user-circle"></i>Perfil</li>
                 </a>
                 <a href="#">
-                    <li class="link-items"><i class="far fa-file-alt"></i> Provas</li>
+                    <li class="link-items"><i class="far fa-file-alt"></i>Provas</li>
                 </a>
                 <a href="#">
-                    <li class="link-items"><i class="fas fa-poll-h"></i> Resultados</li>
+                    <li class="link-items"><i class="fas fa-poll-h"></i>Resultados</li>
                 </a>
                 <a href="#">
-                    <li class="link-items"><i class="far fa-file-certificate"></i></i> Certificados</li>
+                    <li class="link-items"><i class="far fa-file-certificate"></i></i>Certificados</li>
                 </a>
                 <a href="../actions/logout.php">
-                    <li class="link-items"><i class="fas fa-sign-out-alt"></i> Desconectar</li>
+                    <li class="link-items"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
                 </a>
             </ul>
         </div>

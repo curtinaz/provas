@@ -10,6 +10,10 @@ if (!isset($_SESSION['logado'])) {
 } else {
     $name = $_SESSION['name'];
     $mail = $_SESSION['email'];
+
+    $pendentTests = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '0'");
+    $madeTests = $userQuery->fetch_all(MYSQLI_ASSOC);
+
     // fecha o php para o html entrar 
 ?>
 

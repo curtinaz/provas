@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #0b121c;
+  --section-color: #606060;
+  --sec-color: #eef1f7;
+  --title-color: #eef1f7;
+  --text-color: #eef1f7;
+
+  --pendent-color: rgb(255, 255, 217);
+  --made-color: rgb(196, 255, 205);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: "Poppins", serif;
+
+  scroll-behavior: smooth;
+  justify-content: space-around;
+  background-color: var(--bg-color);
+}
+
+main {
+  width: auto;
+}
+
+main .container {
+  max-width: 940px;
+  width: auto;
+  height: 100%;
+  background-color: var(--sec-color);
+}
+
+.container .header {
+  padding: 32px 0;
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .header #header-description {
+  margin-top: 32px;
+}
+
+.quests-field {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  background: rgba(116, 116, 116, 0.199);
+  max-width: 940px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.quest {
+  border-bottom: 2px solid rgb(131, 131, 131);
+  padding: 32px;
+  width: 93.2%;
+}
+
+.quest h4 {
+  margin: 16px 0;
+  font-weight: 500;
+}
+
+.quest input[type="radio"] {
+  margin: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: auto;
+  }
+
+  main .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .container .header {
+    display: block;
+    width: 90%;
+    line-height: 1.4rem;
+    font-size: 16px;
+  }
+
+  .container .header #header-description {
+    margin-bottom: 32px;
+  }
+
+  .quests-field {
+    padding: 0;
+  }
+
+  .quests-field .quest h4 {
+    font-size: 14px;
+  }
+
+  .quest {
+    padding: 12px 24px 24px 12px;
+    width: auto;
+  }
+
+  .quest label {
+    font-size: 14px;
+  }
+}

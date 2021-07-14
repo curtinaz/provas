@@ -9,6 +9,7 @@ if (!isset($_SESSION['logado'])) {
     // testa se o usuário está logado
 } else {
     $name = $_SESSION['name'];
+    $mail = $_SESSION['email'];
     // fecha o php para o html entrar 
 ?>
 

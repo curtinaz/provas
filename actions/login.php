@@ -16,7 +16,7 @@ if (!$_POST['mail'] || !$_POST['senha']) {
     $loginQuery = $conexao->query("SELECT * FROM users WHERE email = '$mail' AND senha = '$senha'");
 
     if ($loginQuery->num_rows == 1) {
-        $userQuery = $conexao->query("SELECT `nome`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
+        $userQuery = $conexao->query("SELECT `nome`, `email`, `id` FROM users WHERE email = '$mail' AND senha = '$senha'");
         $userInfos = $userQuery->fetch_all(MYSQLI_ASSOC);
         // pega o nome do usuário do banco de dados.
 

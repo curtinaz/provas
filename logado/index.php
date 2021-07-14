@@ -12,10 +12,12 @@ if (!isset($_SESSION['logado'])) {
     $mail = $_SESSION['email'];
     $userId = $_SESSION['user_id'];
 
-    $userQuery = $conexao->query("SELECT `nome`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
+    // $userQuery = $conexao->query("SELECT `nome`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
 
     $pendentSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '0'");
     $pendentTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
+
+    echo $pendentTests;
 
     // fecha o php para o html entrar 
 ?>

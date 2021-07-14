@@ -114,9 +114,19 @@ main .container .top-side .made-tests h2 {
   margin-top: 1rem;
 }
 
+main .container .top-side a {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--bg-color);
+}
+
 main .container .top-side .pendents-tests .tests,
 main .container .top-side .made-tests .tests {
   display: flex; 
+  position: relative;
   padding: 8px 12px;
   border-radius: 8px;
   margin: 8px 0;
@@ -156,6 +166,7 @@ main .container .top-side .made-tests h4 {
   font-size: 16px;
   font-weight: 500;
   margin: 4px;
+  width: 84%;
 }
 
 main .container .top-side .made-tests .tests p {
@@ -208,6 +219,7 @@ main .container .top-side .made-tests .tests p {
     font-size: 16px;
     font-weight: 500;
     margin: 4px;
+    width: 84%;
   }
 
   main .container .top-side .pendents-tests .tests p {
@@ -220,11 +232,6 @@ main .container .top-side .made-tests .tests p {
   main .container .top-side .made-tests {
     margin-top: 32px;
     margin-left: 0;
-  }
-  main .container .top-side .made-tests h4 {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 4px;
   }
 
   main .container .top-side .made-tests .tests p {

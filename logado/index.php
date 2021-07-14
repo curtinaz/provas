@@ -42,8 +42,8 @@ if (!isset($_SESSION['logado'])) {
             <i class="far fa-user-circle"></i>
         </div>
         <div class="name">
-            <span id="profile-name">Olá,<?php echo $name ?></span> 
-            <span id="profile-email"><?php echo $mail ?></span>
+            <span id="profile-name"><?php echo 'Olá, '.$name; ?></span> 
+            <span id="profile-email"><?php echo $mail; ?></span>
         </div>
         <div class="items">
             <ul>
@@ -86,17 +86,17 @@ if (!isset($_SESSION['logado'])) {
                         $duracao = ($provas[0]['duracao']/60).' min';
 
                         echo '<div class="tests">';
-                        echo '<h4 id="title">'.$provas[0]['nome'].'</h4>';
-                        echo '<p id="title">Data: '.$data.'</p>';
-                        echo '<p id="title">Duração: '.$duracao.'</p>';
-                        echo '<a href="./prova.html">teste</a>';
+                        echo '<h4>'.$provas[0]['nome'].'</h4>';
+                        echo '<p>Data: '.$data.'</p>';
+                        echo '<p>Duração: '.$duracao.'</p>';
+                        echo '<a href="./prova.html"><i class="fas fa-external-link"></i></a>';
                         echo '</div>';
                     } ?>
 
                     <div class="tests" id="test04">
-                        <h4 id="title"> Liberação Miofascial</h4>
-                        <p id="title">Data: 16/08</p>
-                        <p id="title">Duração: 60min</p>
+                        <h4> Liberação Miofascial</h4>
+                        <p>Data: 16/08</p>
+                        <p>Duração: 60min</p>
                     </div>
                 </div>
             
@@ -108,15 +108,16 @@ if (!isset($_SESSION['logado'])) {
                     <h2>Provas Feitas</h2>
                     
                     <div class="tests" id="made-test01">
-                        <h4 id="title"> Reabilitação das lesões no joelson lorem impsu adora met sirem</h4>
-                        <p id="title">Data: 11/05</p>
-                        <p id="title">Duração: 60min</p>
+                        <h4> Reabilitação das lesões no joelson</h4>
+                        <p>Data: 11/05</p>
+                        <p>Duração: 60min</p>
+                        <a href="./prova.html"><i class="fas fa-external-link"></i></a>
                     </div>
 
                     <div class="tests" id="made-test01">
-                        <h4 id="title"> Levantamento de peso Olímpico</h4>
-                        <p id="title">Data: 11/05</p>
-                        <p id="title">Duração: 60min</p>
+                        <h4> Levantamento de peso Olímpico</h4>
+                        <p>Data: 11/05</p>
+                        <p>Duração: 60min</p>
                     </div>
                 </div>
 

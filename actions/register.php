@@ -23,6 +23,11 @@ if (!$_POST['mail'] || !$_POST['senha'] || !$_POST['name']) {
         $_SESSION["logado"]="YES";
         $_SESSION["name"]=$name;
         $_SESSION["email"]=$mail;
+
+        $userQuery = $conexao->query("SELECT `nome`, `email`, `id` FROM users WHERE email = '$mail' AND senha = '$senha'");
+        $userInfos = $userQuery->fetch_all(MYSQLI_ASSOC);
+        $_SESSION["user_id"]=$userInfos[0]['id'];
+        
         // define que o usuário está logado e, como o nome que ele informou no post é confiável, uso ele mesmo para definir o valor da session name.
 
         header('Location: ../logado/');

@@ -105,6 +105,7 @@ main .container .top-side {
   flex-wrap: nowrap;
 }
 
+
 /* Style titulo pendentes & feitas */
 main .container .top-side .pendents-tests h2,
 main .container .top-side .made-tests h2 {
@@ -120,6 +121,8 @@ main .container .top-side .made-tests .tests {
   border-radius: 8px;
   margin: 8px 0;
   width: 80%;
+  min-width: 30vw;
+  max-width: 40vw;
   flex-direction: column;
   flex-wrap: nowrap;
 }
@@ -144,6 +147,11 @@ main .container .top-side .pendents-tests .tests p {
 }
 /* FIM Provas pendentes FIM */
 
+/* INICIO Provas feitas  */
+main .container .top-side .made-tests {
+  margin-left: 32px;
+}
+
 main .container .top-side .made-tests h4 {
   font-size: 16px;
   font-weight: 500;
@@ -155,6 +163,8 @@ main .container .top-side .made-tests .tests p {
   margin: 4px;
 }
 
+/* FIM Provas feitas FIM */
+
 @media only screen and (max-width: 600px) {
   aside {
     display: none;
@@ -165,7 +175,7 @@ main .container .top-side .made-tests .tests p {
   /*  Provas pendentes & feitas */
   main .container .top-side {
     width: 80%;
-    margin: 2rem;
+    margin: 2rem auto;
     padding: 4px;
     display: flex;
     justify-content: flex-start;
@@ -188,7 +198,8 @@ main .container .top-side .made-tests .tests p {
     padding: 8px 12px;
     border-radius: 8px;
     height: auto;
-    width: 90%;
+    min-width: 74vw;
+    max-width: 74vw;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -208,6 +219,7 @@ main .container .top-side .made-tests .tests p {
   /* INICIO Provas feitas */
   main .container .top-side .made-tests {
     margin-top: 32px;
+    margin-left: 0;
   }
   main .container .top-side .made-tests h4 {
     font-size: 16px;
@@ -223,70 +235,3 @@ main .container .top-side .made-tests .tests p {
   /* FIM Seção principal FIM */
 }
 
-@media only screen and (max-width: 900px) {
-  aside {
-    display: none;
-  }
-
-  /* INICIO Seção principal INICIO */
-
-  /*  Provas pendentes & feitas */
-  main .container .top-side {
-    width: 80%;
-    margin: 2rem;
-    padding: 4px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-
-  /* Style titulo pendentes & feitas */
-  main .container .top-side .pendents-tests h2,
-  main .container .top-side .made-tests h2 {
-    color: var(--title-color);
-    margin-top: 0.4rem;
-  }
-
-  main .container .top-side .pendents-tests .tests,
-  main .container .top-side .made-tests .tests {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: center;
-    padding: 8px 12px;
-    border-radius: 8px;
-    height: auto;
-    width: 90%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  main .container .top-side .pendents-tests h4 {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 4px;
-  }
-
-  main .container .top-side .pendents-tests .tests p {
-    font-size: 14px;
-    margin: 4px;
-  }
-  /* FIM Provas pendentes FIM */
-
-  /* INICIO Provas feitas */
-  main .container .top-side .made-tests {
-    margin-top: 32px;
-  }
-  main .container .top-side .made-tests h4 {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 4px;
-  }
-
-  main .container .top-side .made-tests .tests p {
-    font-size: 14px;
-    margin: 4px;
-  }
-
-  /* FIM Seção principal FIM */
-}

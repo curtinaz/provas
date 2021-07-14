@@ -22,6 +22,7 @@ if (!$_POST['mail'] || !$_POST['senha']) {
 
         $_SESSION["logado"]="YES";
         $_SESSION["name"]=$userInfos[0]['nome'];
+        $_SESSION["user_id"]=$userInfos[0]['id'];
         $_SESSION["email"]=$userInfos[0]['email'];
         // define que o usuário está logado e, define a variável de sessão name com o valor retirado do banco de dados.
 

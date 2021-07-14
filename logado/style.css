@@ -18,12 +18,15 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: max-content;
+  min-height: 100vh;
   display: flex;
   font-family: "Poppins", serif;
   scroll-behavior: smooth;
   justify-content: space-around;
   background-color: var(--sec-color);
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 a {
@@ -38,6 +41,18 @@ aside {
   min-height: 94vh;
   display: flex;
   flex-direction: column;
+  border-right: 2px solid rgb(168, 168, 168);
+  user-select: none;
+}
+
+aside .modal-menu {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--sec-color);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 16px;
 }
 
 aside .profile-picture {
@@ -50,10 +65,8 @@ aside .profile-picture {
 }
 
 aside .items {
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
-  padding: 0 2rem;
 }
 
 aside .name #profile-name,
@@ -91,6 +104,8 @@ aside .items ul .link-items i {
 main {
   margin: 0vh auto;
   width: 100vw;
+  height: 100vh;
+  max-height: max-content;
   background: var(--bg-color);
 }
 
@@ -182,7 +197,10 @@ main .container .top-side .made-tests .tests p {
   }
 
   /* INICIO Seção principal INICIO */
-
+  main {
+    height: max-content;
+    min-height: 100vh;
+  }
   /*  Provas pendentes & feitas */
   main .container .top-side {
     width: 80%;
@@ -205,7 +223,6 @@ main .container .top-side .made-tests .tests p {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    align-items: center;
     padding: 8px 12px;
     border-radius: 8px;
     height: auto;
@@ -213,6 +230,77 @@ main .container .top-side .made-tests .tests p {
     max-width: 74vw;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  main .container .top-side .pendents-tests h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px;
+    width: 84%;
+  }
+
+  main .container .top-side .pendents-tests .tests p {
+    font-size: 14px;
+    margin: 4px;
+  }
+  /* FIM Provas pendentes FIM */
+
+  /* INICIO Provas feitas */
+  main .container .top-side .made-tests {
+    margin-top: 32px;
+    margin-left: 0;
+  }
+
+  main .container .top-side .made-tests .tests p {
+    font-size: 14px;
+    margin: 4px;
+  }
+
+  /* FIM Seção principal FIM */
+}
+
+@media only screen and (max-width: 1000px) {
+  aside {
+    display: none;
+  }
+
+  main {
+    height: max-content;
+    min-height: 100vh;
+  }
+
+  /* INICIO Seção principal INICIO */
+
+  /*  Provas pendentes & feitas */
+  main .container .top-side {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-start;
+    
+    flex-direction: column;
+  }
+
+
+  /* Style titulo pendentes & feitas */
+  main .container .top-side .pendents-tests h2,
+  main .container .top-side .made-tests h2 {
+    color: var(--title-color);
+    margin-top: 0.4rem;
+  }
+
+  main .container .top-side .pendents-tests .tests,
+  main .container .top-side .made-tests .tests {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 8px 12px;
+    border-radius: 8px;
+    height: auto;
+    min-width: 50vw;
+    max-width: 50vw;
+    flex-direction: column;
   }
 
   main .container .top-side .pendents-tests h4 {

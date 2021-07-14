@@ -25,29 +25,48 @@ body {
   scroll-behavior: smooth;
   justify-content: space-around;
   background-color: var(--bg-color);
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 main {
   width: auto;
+  height: max-content;
+  min-height: 100vh;
+  display: flex;
 }
 
 main .container {
   max-width: 940px;
   width: auto;
-  height: 100%;
+  height: max-content;
+  min-height: 100vh;
   background-color: var(--sec-color);
+  position: relative;
+}
+.container .back-btn{
+  display: inline-flex;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: var(--bg-color);
+  user-select: none;
+  text-decoration: none;
+}
+.container .back-btn a {
+  text-decoration: none;
+  user-select: none;
 }
 
 .container .header {
   padding: 32px 0;
-  height: auto;
+  /* height: auto; */
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: center;
+  /* display: inline-flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+  /* justify-content: center; */
+  /* align-items: center; */
   margin: 0 auto;
   text-align: center;
 }
@@ -68,7 +87,7 @@ main .container {
 }
 
 .quest {
-  border-bottom: 2px solid rgb(131, 131, 131);
+  border-bottom: 2px solid rgb(179, 179, 179);
   padding: 32px;
   width: 93.2%;
 }
@@ -80,6 +99,34 @@ main .container {
 
 .quest input[type="radio"] {
   margin: 8px;
+    cursor: pointer;
+  
+}
+main .container .buttons-navigate {
+  display: flex;
+  margin: 14px 8px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+
+}
+
+
+main .container #finish-quest {
+  padding: 4px 8px;
+  width: 120px;
+  height: 28px;
+  background: rgb(38, 102, 240);
+  color: var(--bg-color);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 300ms;
+  user-select: none;
+
+}
+main .container #finish-quest:hover {
+  transform: scale(1.06);
 }
 
 @media only screen and (max-width: 600px) {
@@ -99,6 +146,8 @@ main .container {
     width: 90%;
     line-height: 1.4rem;
     font-size: 16px;
+    padding: 18px 0;
+
   }
 
   .container .header #header-description {
@@ -114,7 +163,7 @@ main .container {
   }
 
   .quest {
-    padding: 12px 24px 24px 12px;
+    padding: 6px 24px 18px 24px;
     width: auto;
   }
 

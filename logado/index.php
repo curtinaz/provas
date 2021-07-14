@@ -33,7 +33,7 @@ if (!isset($_SESSION['logado'])) {
         </div>
         <div class="name">
             <span id="profile-name"><?php echo $name ?></span> 
-            <span id="profile-email">geelpa.ff@gmail.com</span>
+            <span id="profile-email"><?php echo $mail ?></span>
         </div>
         <div class="items">
             <ul>
@@ -49,7 +49,7 @@ if (!isset($_SESSION['logado'])) {
                 <a href="#">
                     <li class="link-items"><i class="far fa-file-certificate"></i></i> Certificados</li>
                 </a>
-                <a href="#">
+                <a href="../actions/logout.php">
                     <li class="link-items"><i class="fas fa-sign-out-alt"></i> Desconectar</li>
                 </a>
             </ul>

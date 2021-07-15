@@ -134,6 +134,13 @@ if (!isset($_SESSION['logado'])) {
                 </div>
             </div>
         </main>
+        <footer>
+            <div class="nav-footer">
+                <div class="nav-container">
+                    
+                </div>
+                <div>
+        </footer>
     </body>
 
     </html>

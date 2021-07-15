@@ -17,7 +17,7 @@
   --made-color: rgb(196, 255, 205);
 }
 body {
-  width: 100vw;
+  width: auto;
   height: 100vh;
   display: flex;
   font-family: "Poppins", serif;
@@ -88,13 +88,13 @@ main .container {
 
 .quests-field .quest:nth-child(odd) {
   background: rgb(137 137 137 / 25%);
-  /* padding: 12px; */
+  padding: 12px;
   width: 97.5%;
 }
 .quests-field .quest:nth-child(even) {
   background: var(--sec-color);
-  /* padding: 12px; */
-  width: 97.5%;
+  padding: 12px;
+  width: auto;
 }
 
 .quest h4 {
@@ -157,18 +157,17 @@ main .container #finish-quest:hover {
 
   .quests-field {
     padding: 0;
-    max-width: 96vw;
+    /* max-width: 95vw; */
 
   }
   .quests-field .quest:nth-child(odd) {
-    padding: 8px;
-    max-width: 96vw;
-
-
+    /* padding: 12px; */
+    width: auto;
   }
   .quests-field .quest:nth-child(even) {
-    padding: 8px;
-    max-width: 100vw;
+    background: var(--sec-color);
+    /* padding: 12px; */
+    width: auto;
   }
 
   .quests-field .quest h4 {

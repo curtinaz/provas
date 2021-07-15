@@ -24,6 +24,11 @@ body {
   font-family: "Poppins", serif;
   scroll-behavior: smooth;
   justify-content: space-around;
-  background-color: var(--sec-color);
+  background: var(--bg-color);
 }
 
+main .container {
+  max-width: 940px;
+
+  background-color: var(---section-color);
+}

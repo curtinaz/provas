@@ -55,6 +55,7 @@ main .container {
 .container .back-btn a {
   text-decoration: none;
   user-select: none;
+  color: var(--bg-color)
 }
 
 .container .header {
@@ -117,7 +118,7 @@ main .container #finish-quest {
   width: 120px;
   height: 28px;
   background: rgb(38, 102, 240);
-  color: var(--bg-color);
+  color: var(--sec-color);
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;

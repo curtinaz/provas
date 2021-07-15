@@ -92,6 +92,12 @@ if (!isset($_SESSION['logado'])) {
                                 echo '<a href="./prova.html"><i class="fas fa-external-link"></i></a>';
                                 echo '</div>';
                             } ?>
+                            <div class="tests" id="made-test01">
+                                <h4> Reabilitação das lesões no joelson</h4>
+                                <p>Data: 11/05</p>
+                                <p>Duração: 60min</p>
+                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                            </div>
 
                         </div>
 
@@ -102,6 +108,18 @@ if (!isset($_SESSION['logado'])) {
                         <div class="made-tests">
                             <h2>Provas Feitas</h2>
 
+                            <div class="tests" id="made-test01">
+                                <h4> Reabilitação das lesões no joelson</h4>
+                                <p>Data: 11/05</p>
+                                <p>Duração: 60min</p>
+                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                            </div>
+                            <div class="tests" id="made-test01">
+                                <h4> Reabilitação das lesões no joelson</h4>
+                                <p>Data: 11/05</p>
+                                <p>Duração: 60min</p>
+                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                            </div>
                             <div class="tests" id="made-test01">
                                 <h4> Reabilitação das lesões no joelson</h4>
                                 <p>Data: 11/05</p>

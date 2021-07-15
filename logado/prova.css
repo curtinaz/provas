@@ -115,8 +115,6 @@ main .container .buttons-navigate {
 
 main .container #finish-quest {
   padding: 4px 8px;
-  width: 120px;
-  height: 28px;
   background: rgb(38, 102, 240);
   color: var(--sec-color);
   border-radius: 4px;
@@ -126,6 +124,7 @@ main .container #finish-quest {
   user-select: none;
 
 }
+
 main .container #finish-quest:hover {
   transform: scale(1.06);
 }

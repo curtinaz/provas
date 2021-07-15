@@ -62,7 +62,16 @@ main .container .profile {
   align-items: center;
 }
 main .container .profile-info {
-  font-size: 1.4rem;
-  color: var(--sec-color);
+  font-size: 1.2rem;
+  color: var(--bg-color);
+  margin: 64px auto 0;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-area: auto;
+  grid-gap: 4px 16px;
+  background-color: var(--sec-color);
+  padding: 16px 32px;
+  border-radius: 4px;
 }
 

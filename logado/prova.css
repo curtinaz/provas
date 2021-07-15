@@ -81,16 +81,20 @@ main .container {
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
-  background: rgba(116, 116, 116, 0.199);
   max-width: 940px;
   width: 100%;
   flex-wrap: nowrap;
 }
 
-.quest {
-  border-bottom: 2px solid rgb(179, 179, 179);
-  padding: 32px;
-  width: 93.2%;
+.quests-field .quest:nth-child(odd) {
+  background: rgb(137 137 137 / 25%);
+  /* padding: 12px; */
+  width: 97.5%;
+}
+.quests-field .quest:nth-child(even) {
+  background: var(--sec-color);
+  /* padding: 12px; */
+  width: 97.5%;
 }
 
 .quest h4 {
@@ -100,16 +104,14 @@ main .container {
 
 .quest input[type="radio"] {
   margin: 8px;
-    cursor: pointer;
-  
+  cursor: pointer;
 }
 main .container .buttons-navigate {
   display: flex;
-  margin: 14px 8px;
+  margin: 34px 24px 8px 0;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-end;
-
 }
 
 
@@ -131,13 +133,13 @@ main .container #finish-quest:hover {
 
 @media only screen and (max-width: 600px) {
   main {
-    width: auto;
+    width: 100vw;
   }
 
   main .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: auto;
   }
 
@@ -147,7 +149,6 @@ main .container #finish-quest:hover {
     line-height: 1.4rem;
     font-size: 16px;
     padding: 18px 0;
-
   }
 
   .container .header #header-description {
@@ -156,18 +157,38 @@ main .container #finish-quest:hover {
 
   .quests-field {
     padding: 0;
+    max-width: 96vw;
+
+  }
+  .quests-field .quest:nth-child(odd) {
+    padding: 8px;
+    max-width: 96vw;
+
+
+  }
+  .quests-field .quest:nth-child(even) {
+    padding: 8px;
+    max-width: 100vw;
   }
 
   .quests-field .quest h4 {
     font-size: 14px;
   }
+  .quests-field .quest {
+    width: auto;
+    padding: 18px;
+  }
 
   .quest {
-    padding: 6px 24px 18px 24px;
-    width: auto;
+    width: 90%;
   }
 
   .quest label {
     font-size: 14px;
   }
+
+  .quest form {
+    max-width: 96%;
+  }
+
 }

@@ -47,7 +47,7 @@ if (!isset($_SESSION['logado'])) {
             </div>
             <div class="items">
                 <ul>
-                    <a href="./perfil.html">
+                    <a href="./perfil.php">
                         <li class="link-items"><i class="far fa-user-circle"></i>Perfil</li>
                     </a>
                     <a href="#">

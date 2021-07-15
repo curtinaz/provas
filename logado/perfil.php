@@ -46,12 +46,12 @@ if (!isset($_SESSION['logado'])) {
                         <i class="far fa-user-circle"></i>
                     </div>
                     <div class="profile-info">
-                        <h5>Nome: <?php echo $name; ?></h5>
-                        <h5>Email: <?php echo $mail; ?> </h5>
-                        <h5>Idade: 24</h5>
-                        <h5>Sexo: masculino</h5>
-                        <h5>Estado: RS</h5>
-                        <h5>Cidade: Porto Alegre</h5>
+                        <p>Nome: <?php echo $name; ?></p>
+                        <p>Email: <?php echo $mail; ?> </p>
+                        <p>Data de nascimento: 24/12/2012 </p>
+                        <p>Sexo: masculino</p>
+                        <p>Estado: Rio Grande do Sul</p>
+                        <p>Cidade: Porto Alegre</p>
                     </div>
                 </div>
                 <div class="profile-info2">

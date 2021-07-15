@@ -42,8 +42,8 @@ if (!isset($_SESSION['logado'])) {
                 <i class="far fa-user-circle"></i>
             </div>
             <div class="name">
-                <span id="profile-name"><?php echo 'Olá, ' . $name; ?></span>
-                <span id="profile-email"><?php echo $mail; ?></span>
+                <span id="profile-name"><?php echo 'Bem-vindo, ' . $name . '!'; ?></span>
+                <!-- <span id="profile-email"><?php echo $mail; ?></span> -->
             </div>
             <div class="items">
                 <ul>
@@ -68,12 +68,9 @@ if (!isset($_SESSION['logado'])) {
         <main>
             <div class="container">
                 <div class="top-side">
-
                     <?php if ($pendentSQL->num_rows > 0) { ?>
-
                         <div class="pendents-tests">
                             <h2>Provas Pendentes</h2>
-
                             <?php for ($i = 0; $i < $pendentSQL->num_rows; $i++) {
 
                                 $provaId = $pendentTests[$i]['prova_id'];
@@ -98,9 +95,7 @@ if (!isset($_SESSION['logado'])) {
                                 <p>Duração: 60min</p>
                                 <a href="./prova.html"><i class="fas fa-external-link"></i></a>
                             </div>
-
                         </div>
-
                     <?php } ?>
 
                     <?php if ($madeSQL->num_rows > 0) { ?>
@@ -126,22 +121,13 @@ if (!isset($_SESSION['logado'])) {
                                 <p>Duração: 60min</p>
                                 <a href="./prova.html"><i class="fas fa-external-link"></i></a>
                             </div>
-
                         </div>
-
                     <?php } ?>
-
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="nav-footer">
-                <div class="nav-container">
-                    
-                </div>
-                <div>
-        </footer>
     </body>
+
 
     </html>
 

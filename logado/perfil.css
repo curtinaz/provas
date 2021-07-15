@@ -33,20 +33,33 @@ main .container {
   min-height: max-content;
   height: 100vh;
   background-color: var(--bg-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  
   border-left: 2px solid var(--sec-color);
   border-right: 2px solid var(--sec-color);
+}
 
+.container .back-btn{
+  display: inline-flex;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: var(--bg-color);
+  user-select: none;
+  text-decoration: none;
+}
+.container .back-btn a {
+  text-decoration: none;
+  user-select: none;
+  color: var(--sec-color)
 }
 
 main .container .profile {
   font-size: 8rem ;
   color: var(--sec-color);
   margin-top: 32px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 main .container .profile-info {
   font-size: 1.4rem;

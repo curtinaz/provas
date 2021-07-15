@@ -29,6 +29,27 @@ body {
 
 main .container {
   max-width: 940px;
+  width: 100vw;
+  min-height: max-content;
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-left: 2px solid var(--sec-color);
+  border-right: 2px solid var(--sec-color);
 
-  background-color: var(---section-color);
 }
+
+main .container .profile {
+  font-size: 8rem ;
+  color: var(--sec-color);
+  margin-top: 32px;
+
+}
+main .container .profile-info {
+  font-size: 1.4rem;
+  color: var(--sec-color);
+}
+

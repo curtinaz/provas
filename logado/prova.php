@@ -12,13 +12,8 @@ if (!isset($_SESSION['logado'])) {
     $mail = $_SESSION['email'];
     $userId = $_SESSION['user_id'];
 
-    // $userQuery = $conexao->query("SELECT `nome`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
-
-    $pendentSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '0'");
-    $pendentTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
-
-    $madeSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '1'");
-    $madeTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
+    $questionsSQL = $conexao->query("SELECT questoes FROM provas WHERE `id` = '$provaId'");
+    $questions = $questionsSQL->fetch_all(MYSQLI_ASSOC);
 
     // fecha o php para o html entrar 
 ?>
@@ -53,6 +48,8 @@ if (!isset($_SESSION['logado'])) {
                         and scrambled it to make a type specimen book.
                     </p>
                 </div>
+
+                <?php if ($pendentSQL->num_rows > 0) { }?>
 
                 <div class="quests-field">
                     <div class="quest">

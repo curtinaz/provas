@@ -89,12 +89,6 @@ if (!isset($_SESSION['logado'])) {
                                 echo '<a href="./prova.php?id='.$pendentTests[$i]['id'].'"><i class="fas fa-external-link"></i></a>';
                                 echo '</div>';
                             } ?>
-                            <div class="tests" id="made-test01">
-                                <h4> Reabilitação das lesões no joelson</h4>
-                                <p>Data: 11/05</p>
-                                <p>Duração: 60min</p>
-                                <a href="./prova.php"><i class="fas fa-external-link"></i></a>
-                            </div>
                         </div>
                     <?php } ?>
 

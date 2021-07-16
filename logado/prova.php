@@ -14,8 +14,17 @@ if (!isset($_SESSION['logado'])) {
 
     $testId = $_GET['id'];
 
+    $testSQL = $conexao->query("SELECT * FROM tests WHERE `id` = '$testId'");
+    $test = $testSQL->fetch_all(MYSQLI_ASSOC);
+
+    $provaId = $test[0]['prova_id'];
+
     $questionsSQL = $conexao->query("SELECT questoes FROM provas WHERE `id` = '$provaId'");
     $questions = $questionsSQL->fetch_all(MYSQLI_ASSOC);
+
+    $questoesInLine = $questions[0]['questoes'];
+
+    $questoes = explode(', ', $questoesInLine);
 
     // fecha o php para o html entrar 
 ?>
@@ -51,10 +60,37 @@ if (!isset($_SESSION['logado'])) {
                     </p>
                 </div>
 
-                <?php if ($pendentSQL->num_rows > 0) { }?>
+                <?php if ($questionsSQL->num_rows > 0) {
+                    echo '<div class="quests-field">';
+                    echo '<div class="quest">';
+                    echo '<form action="" id="">';
 
-                <div class="quests-field">
-                    <div class="quest">
+                    for ($i=0; $i<count($questoes); $i++) {
+
+                        echo '<h4>'.$questoes[$i].'</h4>';
+
+                    }
+                    ?>
+
+                    <?php
+                    echo '</form>';
+                    echo '</div>';
+                    ?>
+                    
+                            <input type="radio" id="quest1-a" name="" value="Estelar">
+                            <label for="quest1-a">Estelar.</label><br>
+                            <input type="radio" id="quest1-b" name="age" value="Estalar">
+                            <label for="quest1-b">Estalar.</label><br>
+                            <input type="radio" id="quest1-c" name="age" value="Estralar">
+                            <label for="quest1-c">took a galley of type
+                                and scrambled it to make a type specimen book.</label><br>
+                            <input type="radio" id="quest1-d" name="age" value="Nenhuma das alternativas acima.">
+                            <label for="quest1-d">Nenhuma das alternativas acima.</label><br>
+                            <input type="radio" id="quest1-e" name="age" value="Todas alternativas acima">
+                            <label for="quest1-e">Todas alternativas acima.</label><br>
+
+
+                    <!-- <div class="quest">
                         <form action="" id="quest01">
                             <h4>De acordo com a famosa frase de Ramiro Inchacuspe, marque a alternativa correta:</h4>
                             <input type="radio" id="quest1-a" name="age" value="Estelar">
@@ -101,24 +137,12 @@ if (!isset($_SESSION['logado'])) {
                             <input type="radio" id="quest1-e" name="age" value="Todas alternativas acima">
                             <label for="quest1-e">Todas alternativas acima.</label><br>
                         </form>
-                    </div>
-                    <div class="quest">
-                        <form action="" id="quest01">
-                            <h4>De acordo com a famosa frase de Ramiro Inchacuspe, marque a alternativa correta:</h4>
-                            <input type="radio" id="quest1-a" name="age" value="Estelar">
-                            <label for="quest1-a">Estelar.</label><br>
-                            <input type="radio" id="quest1-b" name="age" value="Estalar">
-                            <label for="quest1-b">Estalar.</label><br>
-                            <input type="radio" id="quest1-c" name="age" value="Estralar">
-                            <label for="quest1-c">took a galley of type
-                                and scrambled it to make a type specimen book.</label><br>
-                            <input type="radio" id="quest1-d" name="age" value="Nenhuma das alternativas acima.">
-                            <label for="quest1-d">Nenhuma das alternativas acima.</label><br>
-                            <input type="radio" id="quest1-e" name="age" value="Todas alternativas acima">
-                            <label for="quest1-e">Todas alternativas acima.</label><br>
-                        </form>
-                    </div>
+                    </div> -->
+
                 </div>
+
+                <?php } ?>
+                
                 <div class="buttons-navigate">
                     <a href="#" id="finish-quest">Finalizar Prova</a>
                 </div>

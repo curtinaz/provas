@@ -86,7 +86,7 @@ if (!isset($_SESSION['logado'])) {
                                 echo '<h4>' . $provas[0]['nome'] . '</h4>';
                                 echo '<p>Data: ' . $data . '</p>';
                                 echo '<p>Duração: ' . $duracao . '</p>';
-                                echo '<a href="./prova.php"><i class="fas fa-external-link"></i></a>';
+                                echo '<a href="./prova.php?id='.$pendentTests[$i]['id'].'"><i class="fas fa-external-link"></i></a>';
                                 echo '</div>';
                             } ?>
                             <div class="tests" id="made-test01">

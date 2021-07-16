@@ -12,6 +12,8 @@ if (!isset($_SESSION['logado'])) {
     $mail = $_SESSION['email'];
     $userId = $_SESSION['user_id'];
 
+    $testId = $_GET['id'];
+
     $questionsSQL = $conexao->query("SELECT questoes FROM provas WHERE `id` = '$provaId'");
     $questions = $questionsSQL->fetch_all(MYSQLI_ASSOC);
 

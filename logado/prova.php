@@ -1,3 +1,28 @@
+<?php
+
+require_once '../config.php';
+session_start();
+
+if (!isset($_SESSION['logado'])) {
+    echo "Você precisa estar logado para acessar esta página.<br>";
+    echo "<a href='../index.php'>Faça Login</a>";
+    // testa se o usuário está logado
+} else {
+    $name = $_SESSION['name'];
+    $mail = $_SESSION['email'];
+    $userId = $_SESSION['user_id'];
+
+    // $userQuery = $conexao->query("SELECT `nome`, `email` FROM users WHERE email = '$mail' AND senha = '$senha'");
+
+    $pendentSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '0'");
+    $pendentTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
+
+    $madeSQL = $conexao->query("SELECT * FROM tests WHERE `user_id` = '$userId' AND `made` = '1'");
+    $madeTests = $pendentSQL->fetch_all(MYSQLI_ASSOC);
+
+    // fecha o php para o html entrar 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,3 +127,6 @@
     </main>
 </body>
 </html>
+
+<?php } //reinicia o php para poder fechar
+?>

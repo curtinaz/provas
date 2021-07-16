@@ -23,6 +23,8 @@ if (!isset($_SESSION['logado'])) {
     $questions = $questionsSQL->fetch_all(MYSQLI_ASSOC);
 
     $questoesInLine = $questions[0]['questoes'];
+    $questSQL = $conexao->query("SELECT * FROM questoes WHERE `id` IN ($questoesInLine) ORDER BY FIELD (id, $questoesInLine)");
+    $quest = $questSQL->fetch_all(MYSQLI_ASSOC);
 
     $questoes = explode(', ', $questoesInLine);
 
@@ -65,29 +67,31 @@ if (!isset($_SESSION['logado'])) {
                     echo '<div class="quest">';
                     echo '<form action="" id="">';
 
-                    for ($i=0; $i<count($questoes); $i++) {
+                    for ($i = 0; $i < count($questoes); $i++) {
 
-                        echo '<h4>'.$questoes[$i].'</h4>';
+                        $atividade = ($i+1).'. ';
 
+                        echo '<h4>'.$atividade.$quest[$i]['enunciado'] . '</h4>';
+                        echo '<input type="radio" id="'.$i.'-a" name="'.$i.'" value="a">';
+                        echo '<label for="'.$i.'-a">'.$quest[$i]['alt1'].'</label><br>';
+
+                        echo '<input type="radio" id="'.$i.'-b" name="'.$i.'" value="b">';
+                        echo '<label for="'.$i.'-b">'.$quest[$i]['alt2'].'</label><br>';
+
+                        echo '<input type="radio" id="'.$i.'-c" name="'.$i.'" value="c">';
+                        echo '<label for="'.$i.'-c">'.$quest[$i]['alt3'].'</label><br>';
+
+                        echo '<input type="radio" id="'.$i.'-d" name="'.$i.'" value="d">';
+                        echo '<label for="'.$i.'-d">'.$quest[$i]['alt4'].'</label><br>';
+
+                        echo '<input type="radio" id="'.$i.'-e" name="'.$i.'" value="e">';
+                        echo '<label for="'.$i.'-e">'.$quest[$i]['alt5'].'</label><br>';
                     }
-                    ?>
 
-                    <?php
                     echo '</form>';
                     echo '</div>';
-                    ?>
-                    
-                            <input type="radio" id="quest1-a" name="" value="Estelar">
-                            <label for="quest1-a">Estelar.</label><br>
-                            <input type="radio" id="quest1-b" name="age" value="Estalar">
-                            <label for="quest1-b">Estalar.</label><br>
-                            <input type="radio" id="quest1-c" name="age" value="Estralar">
-                            <label for="quest1-c">took a galley of type
-                                and scrambled it to make a type specimen book.</label><br>
-                            <input type="radio" id="quest1-d" name="age" value="Nenhuma das alternativas acima.">
-                            <label for="quest1-d">Nenhuma das alternativas acima.</label><br>
-                            <input type="radio" id="quest1-e" name="age" value="Todas alternativas acima">
-                            <label for="quest1-e">Todas alternativas acima.</label><br>
+                
+                ?>
 
 
                     <!-- <div class="quest">
@@ -139,14 +143,14 @@ if (!isset($_SESSION['logado'])) {
                         </form>
                     </div> -->
 
-                </div>
-
-                <?php } ?>
-                
-                <div class="buttons-navigate">
-                    <a href="#" id="finish-quest">Finalizar Prova</a>
-                </div>
             </div>
+
+        <?php } ?>
+
+        <div class="buttons-navigate">
+            <a href="#" id="finish-quest">Finalizar Prova</a>
+        </div>
+        </div>
         </main>
     </body>
 

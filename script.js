@@ -20,3 +20,14 @@ if (query[1] == "register") {
     document.title = 'Registre-se';
     change();
 }
+
+
+
+document.querySelector(".modal-menu").addEventListener("click", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    menuToggle.classList.toggle("on");
+    const modalMenu = document.querySelector(".modal-menu");
+    modalMenu.classList.toggle("on");
+})
+
+console.log("teste");

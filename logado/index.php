@@ -33,10 +33,38 @@ if (!isset($_SESSION['logado'])) {
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <link rel="stylesheet" href="style.css">
 
+
         <title>Provas</title>
     </head>
 
     <body>
+        <div class="modal">
+            <div class="modal-menu">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <div class="menu-toggle">
+
+                <ul class="modal-links">
+                    <a href="./perfil.php">
+                        <li class="link-items"><i class="far fa-user-circle"></i>Perfil</li>
+                    </a>
+                    <a href="#">
+                        <li class="link-items"><i class="far fa-file-alt"></i>Provas</li>
+                    </a>
+                    <a href="#">
+                        <li class="link-items"><i class="fas fa-poll-h"></i>Resultados</li>
+                    </a>
+                    <a href="#">
+                        <li class="link-items"><i class="far fa-file-certificate"></i></i>Certificados</li>
+                    </a>
+                    <a href="../actions/logout.php">
+                        <li class="link-items"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
         <aside>
             <div class="profile-picture">
                 <i class="far fa-user-circle"></i>
@@ -68,9 +96,10 @@ if (!isset($_SESSION['logado'])) {
         <main>
             <div class="container">
                 <div class="top-side">
-                    <?php if ($pendentSQL->num_rows > 0) { ?>
-                        <div class="pendents-tests">
-                            <h2>Provas Pendentes</h2>
+                    <div class="pendents-tests">
+                        <h2>Provas Pendentes</h2>
+                        <?php if ($pendentSQL->num_rows > 0) { ?>
+
                             <?php for ($i = 0; $i < $pendentSQL->num_rows; $i++) {
 
                                 $provaId = $pendentTests[$i]['prova_id'];
@@ -86,42 +115,49 @@ if (!isset($_SESSION['logado'])) {
                                 echo '<h4>' . $provas[0]['nome'] . '</h4>';
                                 echo '<p>Data: ' . $data . '</p>';
                                 echo '<p>Duração: ' . $duracao . '</p>';
-                                echo '<a href="./prova.php?id='.$pendentTests[$i]['id'].'"><i class="fas fa-external-link"></i></a>';
+                                echo '<a href="./prova.php?id=' . $pendentTests[$i]['id'] . '"><i class="fas fa-external-link"></i></a>';
                                 echo '</div>';
                             } ?>
+                    </div>
+                <?php } ?>
+
+                <?php if ($madeSQL->num_rows > 0) { ?>
+
+                    <div class="made-tests">
+                        <h2>Provas Feitas</h2>
+
+                        <div class="tests" id="made-test01">
+                            <h4> Reabilitação das lesões no joelson</h4>
+                            <p>Data: 11/05</p>
+                            <p>Duração: 60min</p>
+                            <a href="./prova.html"><i class="fas fa-external-link"></i></a>
                         </div>
-                    <?php } ?>
-
-                    <?php if ($madeSQL->num_rows > 0) { ?>
-
-                        <div class="made-tests">
-                            <h2>Provas Feitas</h2>
-
-                            <div class="tests" id="made-test01">
-                                <h4> Reabilitação das lesões no joelson</h4>
-                                <p>Data: 11/05</p>
-                                <p>Duração: 60min</p>
-                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
-                            </div>
-                            <div class="tests" id="made-test01">
-                                <h4> Reabilitação das lesões no joelson</h4>
-                                <p>Data: 11/05</p>
-                                <p>Duração: 60min</p>
-                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
-                            </div>
-                            <div class="tests" id="made-test01">
-                                <h4> Reabilitação das lesões no joelson</h4>
-                                <p>Data: 11/05</p>
-                                <p>Duração: 60min</p>
-                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
-                            </div>
+                        <div class="tests" id="made-test01">
+                            <h4> Reabilitação das lesões no joelson</h4>
+                            <p>Data: 11/05</p>
+                            <p>Duração: 60min</p>
+                            <a href="./prova.html"><i class="fas fa-external-link"></i></a>
                         </div>
-                    <?php } ?>
+                        <div class="tests" id="made-test01">
+                            <h4> Reabilitação das lesões no joelson</h4>
+                            <p>Data: 11/05</p>
+                            <p>Duração: 60min</p>
+                            <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                        </div>
+                    </div>
+                <?php } ?>
                 </div>
             </div>
         </main>
     </body>
-
+    <script>
+        document.querySelector(".modal-menu").addEventListener("click", () => {
+            const menuToggle = document.querySelector(".menu-toggle");
+            menuToggle.classList.toggle("on");
+            const modalMenu = document.querySelector(".modal-menu");
+            modalMenu.classList.toggle("on");
+        })
+    </script>
 
     </html>
 

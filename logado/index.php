@@ -151,12 +151,17 @@ if (!isset($_SESSION['logado'])) {
         </main>
     </body>
     <script>
+
         document.querySelector(".modal-menu").addEventListener("click", () => {
             const menuToggle = document.querySelector(".menu-toggle");
             menuToggle.classList.toggle("on");
             const modalMenu = document.querySelector(".modal");
             modalMenu.classList.toggle("on");
+            document.querySelector(".")
+
+            document.querySelector()
         })
+
     </script>
 
     </html>

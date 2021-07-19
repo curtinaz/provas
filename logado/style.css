@@ -285,7 +285,15 @@ main .container .top-side .made-tests .tests p {
 .modal-menu div {
   height: 4px;
   width: 30px;
-  background: white;
+  background: var(--sec-color);
+  margin: 6px 8px 6px 6px;
+  border-radius: 6px;
+  transition: all 300ms ease 0s;
+}
+.modal-menu.on {
+  height: 4px;
+  width: 30px;
+  background: var(--bg-color);
   margin: 6px 8px 6px 6px;
   border-radius: 6px;
   transition: all 300ms ease 0s;
@@ -301,7 +309,7 @@ main .container .top-side .made-tests .tests p {
   right: 0px;
   top: 0px;
   z-index: 10;
-  background: yellow;
+  background: var(--sec-color);
   transition: all 300ms ease 0s;
 }
 
@@ -309,13 +317,24 @@ main .container .top-side .made-tests .tests p {
   display: inline-flex;
   flex-direction: column;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  list-style: none;
   width: 100%;
   height: 100%;
 }
-.modal .menu-toggle.on .modal-links a {
+.modal .menu-toggle.on .modal-links li .link-items  {
   text-decoration: none;
+  margin: 16px;
+}
+ div.menu-toggle.on > .modal-links > a {
+  margin: 16px;
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--bg-color);
+}
+div.menu-toggle.on > .modal-links > a i{
+  margin: 0 8px;
 }
 
   aside {

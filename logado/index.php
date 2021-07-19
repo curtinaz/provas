@@ -157,9 +157,8 @@ if (!isset($_SESSION['logado'])) {
             menuToggle.classList.toggle("on");
             const modalMenu = document.querySelector(".modal");
             modalMenu.classList.toggle("on");
-            document.querySelector(".")
 
-            document.querySelector(".modal-menu")
+            document.querySelector(".modal-menu").classList.toggle("on");
         })
 
     </script>

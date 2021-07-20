@@ -41,85 +41,6 @@ a {
 }
 
 
-/* Section Aside */
-
-aside {
-    background-color: var(--sec-color);
-    width: 270px;
-    min-width: auto;
-    min-height: 94vh;
-    display: flex;
-    flex-direction: column;
-    border-right: 4px solid rgb(124, 124, 124);
-    user-select: none;
-}
-
-aside .profile-picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    padding-top: 4rem;
-    color: var(--bg-color);
-}
-
-aside .items {
-    display: flex;
-    justify-content: center;
-}
-
-aside .name #profile-name,
-#profile-email {
-    height: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    color: var(--bg-color);
-    font-weight: 500;
-}
-
-aside .items {
-    margin-top: 32px;
-}
-
-aside .items ul .link-items {
-    list-style: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--bg-color);
-    cursor: pointer;
-    width: 240px;
-    padding: 1.4rem;
-    transition: 200ms ease-in-out;
-}
-
-aside .items ul .link-items:hover {
-    color: var(--sec-color);
-}
-
-aside .items ul .link-items#exit-tab:hover {
-    background: #ff0000;
-}
-
-aside .items ul .link-items i {
-    margin: 0 12px;
-}
-
-.modal .menu-toggle.on .modal-links a:hover .modal-links,
-aside .items ul .link-items:hover {
-    background-color: var(--bg-color);
-}
-
-.top-side h2 i {
-    margin: 0 6px 0 4px;
-}
-
-
-/* End Section Aisde */
-
-
 /* INICIO Seção principal INICIO */
 
 main {
@@ -134,7 +55,7 @@ main {
 /*  Provas pendentes & feitas */
 
 main .container .top-side {
-    margin: 0 3%;
+    margin: 2% 3%;
     padding: 4px;
     display: flex;
     justify-content: flex-start;
@@ -150,7 +71,7 @@ main .container .top-side .pendents-tests h2,
 main .container .top-side .made-tests h2 {
     color: var(--title-color);
     text-align: left;
-    margin-top: 1rem;
+    padding: 1rem 0;
 }
 
 main .container .top-side a {
@@ -304,98 +225,6 @@ main .container .top-side .none-tests h4 {
 }
 
 @media only screen and (max-width: 600px) {
-    .modal {
-        display: flex;
-        position: fixed;
-        bottom: 2%;
-        right: 50%;
-        transform: translate(50%);
-        z-index: 16;
-        width: 44px;
-        height: 44px;
-        background: var(--sec-color);
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-    .modal.on {
-        position: fixed;
-        top: 0;
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100vw;
-        height: calc(100vh + 20px);
-        border-radius: 0px;
-    }
-    .modal-menu {
-        /* height: 37px; */
-        /* width: 42px; */
-        cursor: pointer;
-        z-index: 15;
-        position: fixed;
-    }
-    .modal-menu div {
-        height: 4px;
-        width: 25px;
-        background: var(--bg-color);
-        margin: 4px 8px 5px 8px;
-        border-radius: 6px;
-    }
-    .modal-menu.on {
-        position: absolute;
-        transform: translateX(-62%);
-        bottom: 10%;
-        /* width: 100%; */
-        left: 50%;
-        /* margin: 0 auto; */
-        margin-bottom: 24px;
-    }
-    .modal-menu.on .one {
-        transform: rotate(45deg) translate(8px, 1px);
-    }
-    .modal-menu.on .two {
-        display: none;
-    }
-    .modal-menu.on .three {
-        transform: rotate(-45deg) translate(6px, 1px);
-    }
-    .modal-menu.on div {
-        height: 4px;
-        width: 30px;
-        background: var(--bg-color);
-        margin: 6px 8px 6px 6px;
-        border-radius: 6px;
-    }
-    .modal .menu-toggle {
-        display: none;
-    }
-    .menu-toggle.on {
-        display: block;
-    }
-    .modal .menu-toggle.on .modal-links {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        width: 100vw;
-        margin-bottom: 100px;
-    }
-    .modal .menu-toggle.on .modal-links li .link-items {
-        text-decoration: none;
-        margin: 16px;
-    }
-    div.menu-toggle.on>.modal-links>a {
-        margin: 18px;
-        width: 100%;
-        font-size: 1.5rem;
-        color: var(--bg-color);
-    }
-    div.menu-toggle.on>.modal-links>a i {
-        margin: 0 6px;
-    }
-    aside {
-        display: none;
-    }
     /* INICIO Seção principal INICIO */
     main {
         height: max-content;

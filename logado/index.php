@@ -32,6 +32,7 @@ if (!isset($_SESSION['logado'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nav-modal.css">
 
 
         <title>Provas</title>
@@ -50,7 +51,7 @@ if (!isset($_SESSION['logado'])) {
                     <a href="./perfil.php">
                         <li class="link-items"><i class="far fa-user-circle"></i>Perfil</li>
                     </a>
-                    <a href="#">
+                    <a href="./index.php">
                         <li class="link-items"><i class="far fa-file-alt"></i>Provas</li>
                     </a>
                     <a href="#">
@@ -59,8 +60,8 @@ if (!isset($_SESSION['logado'])) {
                     <a href="#">
                         <li class="link-items"><i class="far fa-file-certificate"></i></i>Certificados</li>
                     </a>
-                    <a href="../actions/logout.php">
-                        <li class="link-items" id="exit-tab"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
+                    <a href="../actions/logout.php" id="exit-tab">
+                        <li class="link-items"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
                     </a>
                 </ul>
             </div>
@@ -78,7 +79,7 @@ if (!isset($_SESSION['logado'])) {
                     <a href="./perfil.php">
                         <li class="link-items"><i class="far fa-user-circle"></i>Perfil</li>
                     </a>
-                    <a href="#">
+                    <a href="./index.php">
                         <li class="link-items"><i class="far fa-file-alt"></i>Provas</li>
                     </a>
                     <a href="#">
@@ -160,17 +161,10 @@ if (!isset($_SESSION['logado'])) {
                 </div>
             </div>
         </main>
-    </body>
-    <script>
-        document.querySelector(".modal-menu").addEventListener("click", () => {
-            const menuToggle = document.querySelector(".menu-toggle");
-            menuToggle.classList.toggle("on");
-            const modalMenu = document.querySelector(".modal");
-            modalMenu.classList.toggle("on");
+        <?php echo '<script src="./script.js"></script>'; ?> 
+        <!-- isso tem grandes chances de estar crime, então pfv se tu ver e estiver criminoso, arruma pfv XD -->
 
-            document.querySelector(".modal-menu").classList.toggle("on");
-        })
-    </script>
+    </body>
 
     </html>
 

@@ -122,7 +122,7 @@ if (!isset($_SESSION['logado'])) {
                         <?php } else {
                         ?>
                             <div class="none-tests">
-                                <h4>Você não possui provas pendentes</h4>
+                                <h4>Você não possui provas ainda.</h4>
                             </div>
                         <?php } ?>
                     </div>
@@ -152,7 +152,7 @@ if (!isset($_SESSION['logado'])) {
                 <?php } else { ?>
 
                     <div class="none-tests">
-                        <h4>Você não possui provas feitas</h4>
+                        <h4>Você não possui provas ainda.</h4>
                     </div>
 
                     <?php } ?>

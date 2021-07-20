@@ -1,420 +1,438 @@
-                                            @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-                                            * {
-                                                padding: 0;
-                                                border: 0;
-                                                margin: 0;
-                                            }
-                                            
-                                             :root {
-                                                --bg-color: #0b121c;
-                                                --section-color: #606060;
-                                                --sec-color: #eef1f7;
-                                                --title-color: #eef1f7;
-                                                --text-color: #eef1f7;
-                                                --pendent-color: rgb(255, 255, 217);
-                                                --made-color: rgb(162, 255, 176);
-                                            }
-                                            
-                                            body {
-                                                width: 100vw;
-                                                height: max-content;
-                                                min-height: 100vh;
-                                                display: flex;
-                                                font-family: "Poppins", serif;
-                                                scroll-behavior: smooth;
-                                                justify-content: space-around;
-                                                background-color: var(--sec-color);
-                                                -webkit-tap-highlight-color: transparent;
-                                            }
-                                            
-                                            .modal {
-                                                display: none;
-                                                height: 100%;
-                                            }
-                                            
-                                            header nav {
-                                                display: none;
-                                            }
-                                            
-                                            a {
-                                                text-decoration: none;
-                                            }
-                                            /* Section Aside */
-                                            
-                                            aside {
-                                                background-color: var(--sec-color);
-                                                width: 270px;
-                                                min-width: auto;
-                                                min-height: 94vh;
-                                                display: flex;
-                                                flex-direction: column;
-                                                border-right: 2px solid rgb(168, 168, 168);
-                                                user-select: none;
-                                            }
-                                            
-                                            aside .profile-picture {
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                font-size: 4rem;
-                                                padding-top: 2rem;
-                                                color: var(--bg-color);
-                                            }
-                                            
-                                            aside .items {
-                                                display: flex;
-                                                justify-content: center;
-                                            }
-                                            
-                                            aside .name #profile-name,
-                                            #profile-email {
-                                                height: 20px;
-                                                width: 100%;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                margin: 20px 0;
-                                                color: var(--bg-color);
-                                                font-weight: 500;
-                                            }
-                                            
-                                            aside .items ul .link-items {
-                                                list-style: none;
-                                                margin: 1rem 0;
-                                                font-size: 1.2rem;
-                                                font-weight: 500;
-                                                color: var(--bg-color);
-                                                cursor: pointer;
-                                                width: 240px;
-                                                padding: 12px;
-                                            }
-                                            
-                                            aside .items ul .link-items:hover {
-                                                color: #a3a3a3;
-                                            }
-                                            
-                                            aside .items ul .link-items i {
-                                                margin: 0 12px;
-                                            }
-                                            /* End Section Aisde */
-                                            /* INICIO Seção principal INICIO */
-                                            
-                                            main {
-                                                margin: 0vh auto;
-                                                width: 100vw;
-                                                height: 100vh;
-                                                max-height: max-content;
-                                                background: var(--bg-color);
-                                            }
-                                            /*  Provas pendentes & feitas */
-                                            
-                                            main .container .top-side {
-                                                margin: 0 3%;
-                                                padding: 4px;
-                                                display: flex;
-                                                justify-content: flex-start;
-                                                flex-direction: row;
-                                                align-items: flex-start;
-                                                flex-wrap: nowrap;
-                                            }
-                                            /* Style titulo pendentes & feitas */
-                                            
-                                            main .container .top-side .pendents-tests h2,
-                                            main .container .top-side .made-tests h2 {
-                                                color: var(--title-color);
-                                                text-align: left;
-                                                margin-top: 1rem;
-                                            }
-                                            
-                                            main .container .top-side a {
-                                                position: absolute;
-                                                top: 10%;
-                                                right: 5%;
-                                                text-decoration: none;
-                                                font-size: 1rem;
-                                                color: var(--bg-color);
-                                            }
-                                            
-                                            main .container .top-side .none-tests,
-                                            main .container .top-side .pendents-tests .tests,
-                                            main .container .top-side .made-tests .tests {
-                                                display: flex;
-                                                position: relative;
-                                                padding: 8px 12px;
-                                                border-radius: 8px;
-                                                margin: 8px 0;
-                                                width: 80%;
-                                                min-width: 30vw;
-                                                max-width: 40vw;
-                                                flex-direction: column;
-                                                flex-wrap: nowrap;
-                                            }
-                                            
-                                            main .container .top-side .pendents-tests .tests {
-                                                background: var(--pendent-color);
-                                            }
-                                            
-                                            main .container .top-side .made-tests .tests {
-                                                background: var(--made-color);
-                                            }
-                                            
-                                            main .container .top-side .pendents-tests h4 {
-                                                font-size: 16px;
-                                                font-weight: 500;
-                                                margin: 4px;
-                                            }
-                                            
-                                            main .container .top-side .pendents-tests .tests p {
-                                                font-size: 14px;
-                                                margin: 4px;
-                                            }
-                                            /* FIM Provas pendentes FIM */
-                                            /* INICIO Provas feitas  */
-                                            
-                                            main .container .top-side .made-tests {
-                                                margin-left: 32px;
-                                            }
-                                            
-                                            main .container .top-side .made-tests h4 {
-                                                font-size: 16px;
-                                                font-weight: 500;
-                                                margin: 4px;
-                                                width: 84%;
-                                            }
-                                            
-                                            main .container .top-side .made-tests .tests p {
-                                                font-size: 14px;
-                                                margin: 4px;
-                                            }
-                                            /* Style Titulo sem provas */
-                                            
-                                            main .container .top-side .none-tests {
-                                                background-color: var(--section-color);
-                                                padding: 32px 0;
-                                                text-align: center;
-                                            }
-                                            
-                                            main .container .top-side .none-tests h4 {
-                                                color: var(--sec-color);
-                                            }
-                                            /* FIM Provas feitas FIM */
-                                            
-                                            @media only screen and (max-width: 1000px) {
-                                                aside {
-                                                    display: none;
-                                                }
-                                                main {
-                                                    height: max-content;
-                                                    min-height: 100vh;
-                                                }
-                                                /* INICIO Seção principal INICIO */
-                                                /*  Provas pendentes & feitas */
-                                                main .container .top-side {
-                                                    /* width: 35%; */
-                                                    /* margin: 2rem auto; */
-                                                    padding: 4px;
-                                                    display: flex;
-                                                    justify-content: flex-start;
-                                                    flex-direction: row;
-                                                }
-                                                /* Style titulo pendentes & feitas */
-                                                main .container .top-side .pendents-tests h2,
-                                                main .container .top-side .made-tests h2 {
-                                                    color: var(--title-color);
-                                                    margin-top: 0.4rem;
-                                                }
-                                                main .container .top-side .pendents-tests .tests,
-                                                main .container .top-side .made-tests .tests {
-                                                    display: flex;
-                                                    flex-wrap: wrap;
-                                                    align-content: flex-start;
-                                                    padding: 8px 12px;
-                                                    border-radius: 8px;
-                                                    height: auto;
-                                                    min-width: 40vw;
-                                                    max-width: 50vw;
-                                                    flex-direction: column;
-                                                }
-                                                main .container .top-side .pendents-tests h4 {
-                                                    font-size: 16px;
-                                                    font-weight: 500;
-                                                    margin: 4px;
-                                                    width: 84%;
-                                                }
-                                                main .container .top-side .pendents-tests .tests p {
-                                                    font-size: 14px;
-                                                    margin: 4px;
-                                                }
-                                                /* FIM Provas pendentes FIM */
-                                                /* INICIO Provas feitas */
-                                                main .container .top-side .made-tests .tests p {
-                                                    font-size: 14px;
-                                                    margin: 4px;
-                                                }
-                                                /* FIM Seção principal FIM */
-                                                /* Style Titulo sem provas */
-                                                main .container .top-side .none-tests {
-                                                    background-color: var(--section-color);
-                                                    padding: 32px 0;
-                                                    text-align: center;
-                                                }
-                                            }
-                                            
-                                            @media only screen and (max-width: 600px) {
-                                                .modal {
-                                                    display: flex;
-                                                    position: fixed;
-                                                    bottom: 2%;
-                                                    right: 50%;
-                                                    transform: translate(50%);
-                                                    z-index: 16;
-                                                    width: 44px;
-                                                    height: 44px;
-                                                    background: var(--sec-color);
-                                                    border-radius: 50%;
-                                                    justify-content: center;
-                                                    align-items: center;
-                                                }
-                                                .modal.on {
-                                                    position: fixed;
-                                                    top: 0;
-                                                    display: inline-flex;
-                                                    align-items: center;
-                                                    justify-content: flex-end;
-                                                    width: 100vw;
-                                                    height: calc(100vh + 20px);
-                                                    border-radius: 0px;
-                                                }
-                                                .modal-menu {
-                                                    /* height: 37px; */
-                                                    /* width: 42px; */
-                                                    cursor: pointer;
-                                                    z-index: 15;
-                                                    position: fixed;
-                                                }
-                                                .modal-menu div {
-                                                    height: 4px;
-                                                    width: 25px;
-                                                    background: var(--bg-color);
-                                                    margin: 4px 8px 5px 8px;
-                                                    border-radius: 6px;
-                                                }
-                                                .modal-menu.on {
-                                                    position: absolute;
-                                                    transform: translateX(-62%);
-                                                    bottom: 10%;
-                                                    /* width: 100%; */
-                                                    left: 50%;
-                                                    /* margin: 0 auto; */
-                                                    margin-bottom: 24px;
-                                                }
-                                                .modal-menu.on .one {
-                                                    transform: rotate(45deg) translate(8px, 1px);
-                                                }
-                                                .modal-menu.on .two {
-                                                    display: none;
-                                                }
-                                                .modal-menu.on .three {
-                                                    transform: rotate(-45deg) translate(6px, 1px);
-                                                }
-                                                .modal-menu.on div {
-                                                    height: 4px;
-                                                    width: 30px;
-                                                    background: var(--bg-color);
-                                                    margin: 6px 8px 6px 6px;
-                                                    border-radius: 6px;
-                                                }
-                                                .modal .menu-toggle {
-                                                    display: none;
-                                                }
-                                                .menu-toggle.on {
-                                                    display: block;
-                                                }
-                                                .modal .menu-toggle.on .modal-links {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    list-style: none;
-                                                    width: 100vw;
-                                                    margin-bottom: 100px;
-                                                }
-                                                .modal .menu-toggle.on .modal-links li .link-items {
-                                                    text-decoration: none;
-                                                    margin: 16px;
-                                                }
-                                                div.menu-toggle.on>.modal-links>a {
-                                                    margin: 18px;
-                                                    width: 100%;
-                                                    font-size: 1.5rem;
-                                                    color: var(--bg-color);
-                                                }
-                                                div.menu-toggle.on>.modal-links>a i {
-                                                    margin: 0 18px;
-                                                }
-                                                aside {
-                                                    display: none;
-                                                }
-                                                /* INICIO Seção principal INICIO */
-                                                main {
-                                                    height: max-content;
-                                                    min-height: 100vh;
-                                                }
-                                                /*  Provas pendentes & feitas */
-                                                main .container .top-side {
-                                                    width: 80%;
-                                                    margin: 2rem auto;
-                                                    padding: 4px;
-                                                    display: flex;
-                                                    justify-content: flex-start;
-                                                    flex-direction: column;
-                                                }
-                                                /* Style titulo pendentes & feitas */
-                                                main .container .top-side .pendents-tests h2,
-                                                main .container .top-side .made-tests h2 {
-                                                    color: var(--title-color);
-                                                    margin-top: 0.4rem;
-                                                }
-                                                main .container .top-side .pendents-tests .tests,
-                                                main .container .top-side .made-tests .tests,
-                                                main .container .top-side .none-tests {
-                                                    display: flex;
-                                                    flex-wrap: wrap;
-                                                    align-content: flex-start;
-                                                    padding: 8px 12px;
-                                                    border-radius: 8px;
-                                                    height: auto;
-                                                    min-width: 74vw;
-                                                    max-width: 74vw;
-                                                    flex-direction: row;
-                                                    justify-content: space-between;
-                                                }
-                                                main .container .top-side .pendents-tests h4 {
-                                                    font-size: 16px;
-                                                    font-weight: 500;
-                                                    margin: 4px;
-                                                    width: 84%;
-                                                }
-                                                main .container .top-side .pendents-tests .tests p {
-                                                    font-size: 14px;
-                                                    margin: 4px;
-                                                }
-                                                /* FIM Provas pendentes FIM */
-                                                /* INICIO Provas feitas */
-                                                main .container .top-side .made-tests {
-                                                    margin-top: 32px;
-                                                    margin-left: 0;
-                                                }
-                                                main .container .top-side .made-tests .tests p {
-                                                    font-size: 14px;
-                                                    margin: 4px;
-                                                }
-                                                /* FIM Seção principal FIM */
-                                                /* Style Titulo sem provas */
-                                                main .container .top-side .none-tests {
-                                                    background-color: var(--section-color);
-                                                    padding: 32px 0;
-                                                    text-align: center;
-                                                }
-                                                main .container .top-side .none-tests h4 {
-                                                    width: 100%;
-                                                }
-                                            }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-color: #0b121c;
+    --section-color: #606060;
+    --sec-color: #eef1f7;
+    --title-color: #eef1f7;
+    --text-color: #eef1f7;
+    --pendent-color: rgb(255, 255, 217);
+    --made-color: rgb(162, 255, 176);
+}
+
+body {
+    width: 100vw;
+    height: max-content;
+    min-height: 100vh;
+    display: flex;
+    font-family: "Poppins", serif;
+    scroll-behavior: smooth;
+    justify-content: space-around;
+    background-color: var(--sec-color);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.modal {
+    display: none;
+    height: 100%;
+}
+
+header nav {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Section Aside */
+
+aside {
+    background-color: var(--sec-color);
+    width: 270px;
+    min-width: auto;
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid rgb(168, 168, 168);
+    user-select: none;
+}
+
+aside .profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    padding-top: 2rem;
+    color: var(--bg-color);
+}
+
+aside .items {
+    display: flex;
+    justify-content: center;
+}
+
+aside .name #profile-name,
+#profile-email {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+aside .items ul .link-items {
+    list-style: none;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    cursor: pointer;
+    width: 240px;
+    padding: 12px;
+}
+
+aside .items ul .link-items:hover {
+    color: #a3a3a3;
+}
+
+aside .items ul .link-items i {
+    margin: 0 12px;
+}
+
+
+/* End Section Aisde */
+
+
+/* INICIO Seção principal INICIO */
+
+main {
+    margin: 0vh auto;
+    width: 100vw;
+    height: 100vh;
+    max-height: max-content;
+    background: var(--bg-color);
+}
+
+
+/*  Provas pendentes & feitas */
+
+main .container .top-side {
+    margin: 0 3%;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+
+/* Style titulo pendentes & feitas */
+
+main .container .top-side .pendents-tests h2,
+main .container .top-side .made-tests h2 {
+    color: var(--title-color);
+    text-align: left;
+    margin-top: 1rem;
+}
+
+main .container .top-side a {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--bg-color);
+}
+
+main .container .top-side .none-tests,
+main .container .top-side .pendents-tests .tests,
+main .container .top-side .made-tests .tests {
+    display: flex;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 8px 0;
+    width: 80%;
+    min-width: 30vw;
+    max-width: 40vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+main .container .top-side .pendents-tests .tests {
+    background: var(--pendent-color);
+}
+
+main .container .top-side .made-tests .tests {
+    background: var(--made-color);
+}
+
+main .container .top-side .pendents-tests h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px;
+}
+
+main .container .top-side .pendents-tests .tests p {
+    font-size: 14px;
+    margin: 4px;
+}
+
+
+/* FIM Provas pendentes FIM */
+
+
+/* INICIO Provas feitas  */
+
+main .container .top-side .made-tests {
+    margin-left: 32px;
+}
+
+main .container .top-side .made-tests h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px;
+    width: 84%;
+}
+
+main .container .top-side .made-tests .tests p {
+    font-size: 14px;
+    margin: 4px;
+}
+
+
+/* Style Titulo sem provas */
+
+main .container .top-side .none-tests {
+    background-color: var(--section-color);
+    padding: 32px 12px;
+    text-align: center;
+}
+
+main .container .top-side .none-tests h4 {
+    color: var(--sec-color);
+    width: 100%;
+}
+
+
+/* FIM Provas feitas FIM */
+
+@media only screen and (max-width: 980px) {
+    main {
+        height: max-content;
+        min-height: 100vh;
+    }
+    /* INICIO Seção principal INICIO */
+    /*  Provas pendentes & feitas */
+    main .container .top-side {
+        margin: 0 3%;
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    /* Style titulo pendentes & feitas */
+    main .container .top-side .pendents-tests h2,
+    main .container .top-side .made-tests h2 {
+        color: var(--title-color);
+        margin-top: 0.4rem;
+    }
+    main .container .top-side .pendents-tests .tests,
+    main .container .top-side .made-tests .tests {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 8px 12px;
+        border-radius: 8px;
+        height: auto;
+        min-width: 40vw;
+        max-width: 50vw;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    main .container .top-side .none-tests {
+        padding: 32px 12px;
+    }
+    main .container .top-side .pendents-tests h4 {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 4px;
+        width: 84%;
+    }
+    main .container .top-side .pendents-tests .tests p {
+        font-size: 14px;
+        margin: 4px;
+    }
+    /* FIM Provas pendentes FIM */
+    /* INICIO Provas feitas */
+    main .container .top-side .made-tests {
+        margin-left: 0;
+    }
+    main .container .top-side .made-tests .tests p {
+        font-size: 14px;
+        margin: 4px;
+    }
+    /* FIM Seção principal FIM */
+    /* Style Titulo sem provas */
+    main .container .top-side .none-tests,
+    main .container .top-side .none-tests h4 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal {
+        display: flex;
+        position: fixed;
+        bottom: 2%;
+        right: 50%;
+        transform: translate(50%);
+        z-index: 16;
+        width: 44px;
+        height: 44px;
+        background: var(--sec-color);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal.on {
+        position: fixed;
+        top: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100vw;
+        height: calc(100vh + 20px);
+        border-radius: 0px;
+    }
+    .modal-menu {
+        /* height: 37px; */
+        /* width: 42px; */
+        cursor: pointer;
+        z-index: 15;
+        position: fixed;
+    }
+    .modal-menu div {
+        height: 4px;
+        width: 25px;
+        background: var(--bg-color);
+        margin: 4px 8px 5px 8px;
+        border-radius: 6px;
+    }
+    .modal-menu.on {
+        position: absolute;
+        transform: translateX(-62%);
+        bottom: 10%;
+        /* width: 100%; */
+        left: 50%;
+        /* margin: 0 auto; */
+        margin-bottom: 24px;
+    }
+    .modal-menu.on .one {
+        transform: rotate(45deg) translate(8px, 1px);
+    }
+    .modal-menu.on .two {
+        display: none;
+    }
+    .modal-menu.on .three {
+        transform: rotate(-45deg) translate(6px, 1px);
+    }
+    .modal-menu.on div {
+        height: 4px;
+        width: 30px;
+        background: var(--bg-color);
+        margin: 6px 8px 6px 6px;
+        border-radius: 6px;
+    }
+    .modal .menu-toggle {
+        display: none;
+    }
+    .menu-toggle.on {
+        display: block;
+    }
+    .modal .menu-toggle.on .modal-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 100vw;
+        margin-bottom: 100px;
+    }
+    .modal .menu-toggle.on .modal-links li .link-items {
+        text-decoration: none;
+        margin: 16px;
+    }
+    div.menu-toggle.on>.modal-links>a {
+        margin: 18px;
+        width: 100%;
+        font-size: 1.5rem;
+        color: var(--bg-color);
+    }
+    div.menu-toggle.on>.modal-links>a i {
+        margin: 0 18px;
+    }
+    aside {
+        display: none;
+    }
+    /* INICIO Seção principal INICIO */
+    main {
+        height: max-content;
+        min-height: 100vh;
+    }
+    /*  Provas pendentes & feitas */
+    main .container .top-side {
+        width: 80%;
+        margin: 2rem auto;
+        padding: 4px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    /* Style titulo pendentes & feitas */
+    main .container .top-side .pendents-tests h2,
+    main .container .top-side .made-tests h2 {
+        color: var(--title-color);
+        margin-top: 0.4rem;
+    }
+    main .container .top-side .pendents-tests .tests,
+    main .container .top-side .made-tests .tests,
+    main .container .top-side .none-tests {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 8px 12px;
+        border-radius: 8px;
+        height: auto;
+        min-width: 74vw;
+        max-width: 74vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    main .container .top-side .pendents-tests h4 {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 4px;
+        width: 84%;
+    }
+    main .container .top-side .pendents-tests .tests p {
+        font-size: 14px;
+        margin: 4px;
+    }
+    /* FIM Provas pendentes FIM */
+    /* INICIO Provas feitas */
+    main .container .top-side .made-tests {
+        margin-top: 32px;
+        margin-left: 0;
+    }
+    main .container .top-side .made-tests .tests p {
+        font-size: 14px;
+        margin: 4px;
+    }
+    /* FIM Seção principal FIM */
+    /* Style Titulo sem provas */
+    main .container .top-side .none-tests,
+    main .container .top-side .none-tests h4 {
+        width: 100%;
+    }
+}

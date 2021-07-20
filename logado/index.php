@@ -59,7 +59,7 @@ if (!isset($_SESSION['logado'])) {
                     <a href="#">
                         <li class="link-items"><i class="far fa-file-certificate"></i></i>Certificados</li>
                     </a>
-                    <a href="../actions/logout.php">
+                    <a href="../actions/logout.php" id="exit-tab">
                         <li class="link-items"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
                     </a>
                 </ul>

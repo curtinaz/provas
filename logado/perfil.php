@@ -1,6 +1,7 @@
 <?php
 
 require_once '../config.php';
+require_once '../utils/userAge.php';
 session_start();
 
 if (!isset($_SESSION['logado'])) {
@@ -48,10 +49,10 @@ if (!isset($_SESSION['logado'])) {
                     <div class="profile-info">
                         <p>Nome: <?php echo $name; ?></p>
                         <p>Email: <?php echo $mail; ?> </p>
-                        <p>Data de nascimento: 24/12/2012 </p>
+                        <!-- <p>Idade: <?php echo calcularIdade('2012-12-24') ?> anos</p>
                         <p>Sexo: masculino</p>
                         <p>Estado: Rio Grande do Sul</p>
-                        <p>Cidade: Porto Alegre</p>
+                        <p>Cidade: Porto Alegre</p> -->
                     </div>
                 </div>
                 <div class="profile-info2">

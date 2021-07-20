@@ -262,12 +262,12 @@ main .container .top-side .made-tests .tests p {
     .modal {
         display: flex;
         position: fixed;
-        bottom: 4%;
+        bottom: 2%;
         right: 50%;
         transform: translate(50%);
         z-index: 16;
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         background: var(--sec-color);
         border-radius: 50%;
         justify-content: center;
@@ -280,7 +280,7 @@ main .container .top-side .made-tests .tests p {
         align-items: center;
         justify-content: flex-end;
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh + 20px);
         border-radius: 0px;
     }
     .modal-menu {
@@ -300,11 +300,11 @@ main .container .top-side .made-tests .tests p {
     .modal-menu.on {
         position: absolute;
         transform: translateX(-62%);
-        bottom: 4%;
+        bottom: 10%;
         /* width: 100%; */
         left: 50%;
         /* margin: 0 auto; */
-        margin-bottom: 12px;
+        margin-bottom: 24px;
     }
     .modal-menu.on .one {
         transform: rotate(45deg) translate(8px, 1px);
@@ -333,6 +333,7 @@ main .container .top-side .made-tests .tests p {
         flex-direction: column;
         list-style: none;
         width: 100vw;
+        margin-bottom: 100px;
     }
     .modal .menu-toggle.on .modal-links li .link-items {
         text-decoration: none;

@@ -118,40 +118,50 @@ if (!isset($_SESSION['logado'])) {
                                 echo '<a href="./prova.php?id=' . $pendentTests[$i]['id'] . '"><i class="fas fa-external-link"></i></a>';
                                 echo '</div>';
                             } ?>
+
+                        <?php } else {
+                        ?>
+                            <div class="none-tests">
+                                <h4>Você não possui provas pendentes</h4>
+                            </div>
+                        <?php } ?>
                     </div>
-                <?php } ?>
-
-                <?php if ($madeSQL->num_rows > 0) { ?>
-
                     <div class="made-tests">
                         <h2>Provas Feitas</h2>
+                        <?php if ($madeSQL->num_rows > 0) { ?>
 
-                        <div class="tests" id="made-test01">
-                            <h4> Reabilitação das lesões no joelson</h4>
-                            <p>Data: 11/05</p>
-                            <p>Duração: 60min</p>
-                            <a href="./prova.html"><i class="fas fa-external-link"></i></a>
-                        </div>
-                        <div class="tests" id="made-test01">
-                            <h4> Reabilitação das lesões no joelson</h4>
-                            <p>Data: 11/05</p>
-                            <p>Duração: 60min</p>
-                            <a href="./prova.html"><i class="fas fa-external-link"></i></a>
-                        </div>
-                        <div class="tests" id="made-test01">
-                            <h4> Reabilitação das lesões no joelson</h4>
-                            <p>Data: 11/05</p>
-                            <p>Duração: 60min</p>
-                            <a href="./prova.html"><i class="fas fa-external-link"></i></a>
-                        </div>
+                            <div class="tests" id="made-test01">
+                                <h4> Reabilitação das lesões no joelson</h4>
+                                <p>Data: 11/05</p>
+                                <p>Duração: 60min</p>
+                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                            </div>
+                            <div class="tests" id="made-test01">
+                                <h4> Reabilitação das lesões no joelson</h4>
+                                <p>Data: 11/05</p>
+                                <p>Duração: 60min</p>
+                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                            </div>
+                            <div class="tests" id="made-test01">
+                                <h4> Reabilitação das lesões no joelson</h4>
+                                <p>Data: 11/05</p>
+                                <p>Duração: 60min</p>
+                                <a href="./prova.html"><i class="fas fa-external-link"></i></a>
+                            </div>
                     </div>
-                <?php } ?>
+                <?php } else { ?>
+
+                    <div class="none-tests">
+                        <h4>Você não possui provas feitas</h4>
+                    </div>
+
+                    <?php } ?>
+                    
                 </div>
             </div>
         </main>
     </body>
     <script>
-
         document.querySelector(".modal-menu").addEventListener("click", () => {
             const menuToggle = document.querySelector(".menu-toggle");
             menuToggle.classList.toggle("on");
@@ -160,7 +170,6 @@ if (!isset($_SESSION['logado'])) {
 
             document.querySelector(".modal-menu").classList.toggle("on");
         })
-
     </script>
 
     </html>

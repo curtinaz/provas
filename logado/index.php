@@ -59,8 +59,8 @@ if (!isset($_SESSION['logado'])) {
                     <a href="#">
                         <li class="link-items"><i class="far fa-file-certificate"></i></i>Certificados</li>
                     </a>
-                    <a href="../actions/logout.php" id="exit-tab">
-                        <li class="link-items"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
+                    <a href="../actions/logout.php">
+                        <li class="link-items" id="exit-tab"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
                     </a>
                 </ul>
             </div>
@@ -88,7 +88,7 @@ if (!isset($_SESSION['logado'])) {
                         <li class="link-items"><i class="far fa-file-certificate"></i></i>Certificados</li>
                     </a>
                     <a href="../actions/logout.php">
-                        <li class="link-items"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
+                        <li class="link-items" id="exit-tab"><i class="fas fa-sign-out-alt"></i>Desconectar</li>
                     </a>
                 </ul>
             </div>
@@ -97,7 +97,7 @@ if (!isset($_SESSION['logado'])) {
             <div class="container">
                 <div class="top-side">
                     <div class="pendents-tests">
-                        <h2>Provas Pendentes</h2>
+                        <h2> <i class="far fa-clock"></i> Provas Pendentes</h2>
                         <?php if ($pendentSQL->num_rows > 0) { ?>
 
                             <?php for ($i = 0; $i < $pendentSQL->num_rows; $i++) {
@@ -127,7 +127,7 @@ if (!isset($_SESSION['logado'])) {
                         <?php } ?>
                     </div>
                     <div class="made-tests">
-                        <h2>Provas Feitas</h2>
+                        <h2><i class="far fa-check-circle"></i></i> Provas Feitas</h2>
                         <?php if ($madeSQL->num_rows > 0) { ?>
 
                             <div class="tests" id="made-test01">
@@ -155,8 +155,8 @@ if (!isset($_SESSION['logado'])) {
                         <h4>Você não possui provas ainda.</h4>
                     </div>
 
-                    <?php } ?>
-                    
+                <?php } ?>
+
                 </div>
             </div>
         </main>

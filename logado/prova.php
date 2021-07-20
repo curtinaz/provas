@@ -19,10 +19,13 @@ if (!isset($_SESSION['logado'])) {
 
     $provaId = $test[0]['prova_id'];
 
-    $questionsSQL = $conexao->query("SELECT questoes FROM provas WHERE `id` = '$provaId'");
+    $questionsSQL = $conexao->query("SELECT questoes, briefing FROM provas WHERE `id` = '$provaId'");
     $questions = $questionsSQL->fetch_all(MYSQLI_ASSOC);
 
+    $briefing = $questions[0]['briefing'];
     $questoesInLine = $questions[0]['questoes'];
+
+
     $questSQL = $conexao->query("SELECT * FROM questoes WHERE `id` IN ($questoesInLine) ORDER BY FIELD (id, $questoesInLine)");
     $quest = $questSQL->fetch_all(MYSQLI_ASSOC);
 
@@ -56,18 +59,18 @@ if (!isset($_SESSION['logado'])) {
                         Informações da prova
                     </h2>
                     <p id="header-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                        and scrambled it to make a type specimen book.
+                        <?php echo $briefing ?>
                     </p>
                 </div>
 
                 <?php if ($questionsSQL->num_rows > 0) {
                     echo '<div class="quests-field">';
-                    echo '<div class="quest">';
+                    
                     echo '<form action="" id="">';
 
                     for ($i = 0; $i < count($questoes); $i++) {
+
+                        echo '<div class="quest">';
 
                         $atividade = ($i+1).'. ';
 
@@ -86,10 +89,13 @@ if (!isset($_SESSION['logado'])) {
 
                         echo '<input type="radio" id="'.$i.'-e" name="'.$i.'" value="e">';
                         echo '<label for="'.$i.'-e">'.$quest[$i]['alt5'].'</label><br>';
+
+                        echo '</div>';
+
                     }
 
                     echo '</form>';
-                    echo '</div>';
+
                 
                 ?>
 

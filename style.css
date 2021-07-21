@@ -5,6 +5,16 @@
     margin: 0;
 }
 
+:root {
+    --bg-color: #0b121c;
+    --section-color: #5a5a5a;
+    --sec-color: #eef1f7;
+    --title-color: #eef1f7;
+    --text-color: #eef1f7;
+    --pendent-color: rgb(255, 255, 217);
+    --made-color: rgb(162, 255, 176);
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -12,14 +22,14 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgb(41, 85, 207), rgb(16, 147, 207));
+    background: var(--bg-color);
     background-size: cover;
 }
 
 form {
     width: 22rem;
     height: 28rem;
-    background-color: aliceblue;
+    background: var(--sec-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +40,7 @@ form {
 .cadastro {
     width: 22rem;
     height: 28rem;
-    background-color: aliceblue;
+    background: var(--sec-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +51,7 @@ form {
 
 h1 {
     margin: 1.2rem 0 3rem;
-    color: rgb(0, 0, 0);
+    color: var(--bg-color);
     user-select: none;
 }
 
@@ -53,14 +63,29 @@ input.campo,
 .campo {
     width: 16rem;
     height: 2rem;
-    background: rgb(255, 255, 255);
+    background: rgba(163, 163, 163, 0.281);
     text-align: center;
     outline: none;
     margin: .6rem 0;
-    color: rgb(0, 0, 0);
     border-radius: 16px;
-    border-bottom: 1px solid aliceblue;
+    transition: 300ms;
 }
+.campo:focus {
+    background: #fff;
+
+}
+input[type=email]::placeholder, 
+input[type=password]::placeholder {
+    font-size: 14px;
+}
+
+input[type=email]::placeholder:focus, 
+input[type=password]::placeholder:focus {
+    opacity: 0;
+}
+
+
+
 
 input[type=submit] {
     background: rgb(255, 0, 0);
@@ -70,30 +95,6 @@ input[type=submit] {
     width: 15rem;
     height: 2rem;
     cursor: pointer;
-}
-
-input.campo:hover,
-.campo:hover,
-#btns input[type=submit]:hover {
-    width: 16.6rem;
-}
-
-input {
-    transition: .4s;
-    font-size: .96rem;
-}
-
-input .campo,
-.campo:focus {
-    width: 16.6rem;
-}
-
-input::placeholder {
-    color: rgba(134, 134, 134, 0.685);
-}
-
-input::placeholder:focus {
-    color: none;
 }
 
 a {

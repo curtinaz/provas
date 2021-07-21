@@ -12,6 +12,7 @@
 
 <body>
     <main>
+        <div class="container">
         <!-- Login -->
         <form action="./actions/login.php" class="" id="login-form" method="POST">
             <h1>Login</h1>
@@ -37,6 +38,7 @@
 
             <a href="#login" onClick="changeTitle('Conecte-se')" id="register_btn2" style="margin-bottom: -.0rem;">Já tem uma conta? Faça o login</a>
         </form>
+        </div>
     </main>
 
 

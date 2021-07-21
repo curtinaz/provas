@@ -1,193 +1,182 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 * {
-  padding: 0;
-  border: 0;
-  margin: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
 
 :root {
-  --bg-color: #0b121c;
-  --section-color: #606060;
-  --sec-color: #eef1f7;
-  --title-color: #eef1f7;
-  --text-color: #eef1f7;
-
-  --pendent-color: rgb(255, 255, 217);
-  --made-color: rgb(196, 255, 205);
+    --bg-color: #0b121c;
+    --section-color: #606060;
+    --sec-color: #eef1f7;
+    --title-color: #eef1f7;
+    --text-color: #eef1f7;
+    --pendent-color: rgb(255, 255, 217);
+    --made-color: rgb(196, 255, 205);
 }
+
 body {
-  width: auto;
-  height: 100vh;
-  display: flex;
-  font-family: "Poppins", serif;
-
-  scroll-behavior: smooth;
-  justify-content: space-around;
-  background-color: var(--bg-color);
-  -webkit-tap-highlight-color: transparent;
-
+    width: auto;
+    height: 100vh;
+    display: flex;
+    font-family: "Poppins", serif;
+    scroll-behavior: smooth;
+    justify-content: space-around;
+    background-color: var(--bg-color);
+    -webkit-tap-highlight-color: transparent;
 }
 
 main {
-  width: auto;
-  height: max-content;
-  min-height: 100vh;
-  display: flex;
+    width: auto;
+    height: max-content;
+    min-height: 100vh;
+    display: flex;
 }
 
 main .container {
-  max-width: 940px;
-  width: auto;
-  height: max-content;
-  min-height: 100vh;
-  background-color: var(--sec-color);
-  position: relative;
+    max-width: 940px;
+    width: auto;
+    height: max-content;
+    min-height: 100vh;
+    background-color: var(--sec-color);
+    position: relative;
 }
-.container .back-btn{
-  display: inline-flex;
-  padding: 12px;
-  font-size: 1.2rem;
-  color: var(--bg-color);
-  user-select: none;
-  text-decoration: none;
+
+.container .back-btn {
+    display: inline-flex;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: var(--bg-color);
+    user-select: none;
+    text-decoration: none;
 }
+
 .container .back-btn a {
-  text-decoration: none;
-  user-select: none;
-  color: var(--bg-color)
+    text-decoration: none;
+    user-select: none;
+    color: var(--bg-color)
 }
 
 .container .header {
-  padding: 32px 0;
-  /* height: auto; */
-  width: 80%;
-  /* display: inline-flex; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  /* align-content: center; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  margin: 0 auto;
-  text-align: center;
+    padding: 32px 0;
+    /* height: auto; */
+    width: 80%;
+    /* display: inline-flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 0 auto;
+    text-align: center;
 }
 
 .container .header #header-description {
-  margin-top: 32px;
+    margin-top: 32px;
 }
 
 .quests-field {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: column;
-  max-width: 940px;
-  width: 100%;
-  flex-wrap: nowrap;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 940px;
+    width: 100%;
+    flex-wrap: nowrap;
 }
 
 .quests-field .quest:nth-child(odd) {
-  background: rgb(137 137 137 / 25%);
-  padding: 12px;
-  width: 97.5%;
+    background: rgb(137 137 137 / 25%);
+    padding: 2% 5.6%;
+    width: 97.5%;
 }
+
 .quests-field .quest:nth-child(even) {
-  background: var(--sec-color);
-  padding: 12px;
-  width: auto;
+    background: var(--sec-color);
+    padding: 2% 5.6%;
+    width: 97.5%;
 }
 
 .quest h4 {
-  margin: 16px 0;
-  font-weight: 500;
+    margin: 16px 0;
+    font-weight: 500;
 }
 
 .quest input[type="radio"] {
-  margin: 8px;
-  cursor: pointer;
-}
-main .container .buttons-navigate {
-  display: flex;
-  margin: 34px 24px 8px 0;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-end;
+    margin: 8px;
+    cursor: pointer;
 }
 
+main .container .buttons-navigate {
+    display: flex;
+    margin: 34px 24px 8px 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
 
 main .container #finish-quest {
-  padding: 4px 8px;
-  background: rgb(38, 102, 240);
-  color: var(--sec-color);
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 300ms;
-  user-select: none;
-
+    padding: 4px 8px;
+    background: rgb(38, 102, 240);
+    color: var(--sec-color);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 300ms;
+    user-select: none;
 }
 
 main .container #finish-quest:hover {
-  transform: scale(1.06);
+    transform: scale(1.06);
 }
 
 @media only screen and (max-width: 600px) {
-  main {
-    width: 100vw;
-  }
-
-  main .container {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
-  }
-
-  .container .header {
-    display: block;
-    width: 90%;
-    line-height: 1.4rem;
-    font-size: 16px;
-    padding: 18px 0;
-  }
-
-  .container .header #header-description {
-    margin-bottom: 32px;
-  }
-
-  .quests-field {
-    padding: 0;
-    /* max-width: 95vw; */
-
-  }
-  .quests-field .quest:nth-child(odd) {
-    /* padding: 12px; */
-    width: auto;
-  }
-  .quests-field .quest:nth-child(even) {
-    background: var(--sec-color);
-    /* padding: 12px; */
-    width: auto;
-  }
-
-  .quests-field .quest h4 {
-    font-size: 14px;
-  }
-  .quests-field .quest {
-    width: auto;
-    padding: 18px;
-  }
-
-  .quest {
-    width: 90%;
-  }
-
-  .quest label {
-    font-size: 14px;
-  }
-
-  .quest form {
-    max-width: 96%;
-  }
-
+    main {
+        width: 100vw;
+    }
+    main .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+    }
+    .container .header {
+        display: block;
+        width: 90%;
+        line-height: 1.4rem;
+        font-size: 16px;
+        padding: 18px 0;
+    }
+    .container .header #header-description {
+        margin-bottom: 32px;
+    }
+    .quests-field {
+        padding: 0;
+        /* max-width: 95vw; */
+    }
+    .quests-field .quest:nth-child(odd) {
+        /* padding: 12px; */
+        width: auto;
+    }
+    .quests-field .quest:nth-child(even) {
+        background: var(--sec-color);
+        /* padding: 12px; */
+        width: auto;
+    }
+    .quests-field .quest h4 {
+        font-size: 14px;
+    }
+    .quests-field .quest {
+        width: auto;
+        padding: 18px;
+    }
+    .quest {
+        width: 90%;
+    }
+    .quest label {
+        font-size: 14px;
+    }
+    .quest form {
+        max-width: 96%;
+    }
 }

@@ -68,7 +68,7 @@ if (!isset($_SESSION['logado'])) {
         </div>
         <aside>
             <div class="profile-picture">
-                <i class="far fa-user-circle"></i>
+            <i class="far fa-user-circle"></i>
             </div>
             <div class="name">
                 <span id="profile-name"><?php echo 'Bem-vindo, ' . $name . '!'; ?></span>

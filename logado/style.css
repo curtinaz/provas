@@ -7,7 +7,7 @@
 
 :root {
     --bg-color: #0b121c;
-    --section-color: #919191d2;
+    --section-color: #5a5a5a;
     --sec-color: #eef1f7;
     --title-color: #eef1f7;
     --text-color: #eef1f7;
@@ -144,7 +144,6 @@ main .container .top-side .made-tests .tests p {
 
 main .container .top-side .none-tests {
     background-color: var(--section-color);
-    padding: 38px 12px;
     text-align: center;
 }
 

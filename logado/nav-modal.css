@@ -172,7 +172,7 @@ aside .items ul .link-items#exit-tab:hover {
     .modal {
         display: flex;
         position: fixed;
-        bottom: 2%;
+        bottom: 4%;
         right: 50%;
         transform: translate(50%);
         z-index: 16;
@@ -210,33 +210,20 @@ aside .items ul .link-items#exit-tab:hover {
     .modal-menu.on {
         position: absolute;
         transform: translateX(-62%);
-        bottom: 10%;
+        bottom: 11%;
         /* width: 100%; */
         left: 50%;
         /* margin: 0 auto; */
         margin-bottom: 24px;
-        border-radius: 50%;
-        height: 48px;
-        width: 48px;
-    }
-    .modal-menu.on:hover {
-        background: var(--bg-color);
-    }
-    .modal-menu.on:hover .one:hover>.three:hover {
-        background: var(--sec-color);
     }
     .modal-menu.on .one {
         transform: rotate(45deg) translate(8px, 1px);
-        margin-top: 15px;
-        margin-left: 4px;
     }
     .modal-menu.on .two {
         display: none;
     }
     .modal-menu.on .three {
         transform: rotate(-45deg) translate(6px, 1px);
-        margin-top: 0px;
-        margin-left: 4px;
     }
     .modal-menu.on div {
         height: 4px;
@@ -254,16 +241,20 @@ aside .items ul .link-items#exit-tab:hover {
     .modal .menu-toggle.on .modal-links {
         display: flex;
         flex-direction: column;
+        height: 100%;
         list-style: none;
         width: 100vw;
         margin-bottom: 100px;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
     }
     .modal .menu-toggle.on .modal-links li .link-items {
         text-decoration: none;
         margin: 16px;
     }
     div.menu-toggle.on>.modal-links>a {
-        padding: 18px;
+        padding: 4vh 20vw;
         width: 100%;
         font-size: 1.5rem;
         color: var(--bg-color);

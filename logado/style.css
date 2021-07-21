@@ -89,7 +89,7 @@ main .container .top-side .made-tests .tests {
     display: flex;
     position: relative;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 8px 0;
     width: 80%;
     min-width: 30vw;
@@ -182,7 +182,7 @@ main .container .top-side .none-tests h4 {
         flex-wrap: wrap;
         align-content: flex-start;
         padding: 8px 12px;
-        border-radius: 8px;
+        border-radius: 4px;
         height: auto;
         min-width: 40vw;
         max-width: 50vw;
@@ -251,7 +251,7 @@ main .container .top-side .none-tests h4 {
         flex-wrap: wrap;
         align-content: flex-start;
         /* padding: 8px 12px; */
-        border-radius: 8px;
+        border-radius: 4px;
         height: auto;
         min-width: 74vw;
         max-width: 74vw;
@@ -282,6 +282,6 @@ main .container .top-side .none-tests h4 {
     /* Style Titulo sem provas */
     main .container .top-side .none-tests,
     main .container .top-side .none-tests h4 {
-        width: 100%;
+        width: auto;
     }
 }
